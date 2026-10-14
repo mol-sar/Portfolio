@@ -1,43 +1,43 @@
-// Detailed project modal data dictionary
+// Detailed Project Modal Data
 const projectsData = {
   1: {
-    title: "EcoMiner 2D Game Engine",
-    tech: "C++, OpenGL, GLUT, Object-Oriented Programming",
-    desc: "A standalone 2D interactive game engine built from scratch. Implements real-time primitive rendering pipelines, collision checks, and clean class inheritance hierarchy. The game develop from a collaborative group project under Computer Graphics.",
+    title: "EcoMiner: 2D Mining Simulation Engine",
+    tech: "C++, OpenGL, GLUT, Object-Oriented Architecture",
+    desc: "A collaborative Computer Graphics group project building an interactive 2D mining game engine from scratch in C++ and OpenGL. Features custom primitive rendering pipelines, real-time bounding-box collision detection, and a modular OOP class hierarchy governing player physics and terrain deformation.",
     repo: "https://github.com/mol-sar/ecominer2d"
   },
   2: {
     title: "Sarawak Heritage Online Auction (SHAA)",
-    tech: "PHP, MariaDB / MySQL, SQL Schema Normalization",
-    desc: "A complete cultural asset auction portal normalized through 3NF to maintain data integrity, multi-user bidding logic, and real-time inventory transactions.",
+    tech: "PHP, MariaDB / MySQL, Schema Normalization (1NF–3NF)",
+    desc: "A secure web portal and relational database system built with PHP and MariaDB/MySQL. Engineered an ACID-compliant schema normalized to 3NF to prevent transaction anomalies, featuring role-based access control (RBAC), multi-user concurrent bid tracking, and prepared SQL statements.",
     repo: "https://github.com/mol-sar/SHA"
   },
   3: {
     title: "ART Mobile Application Prototype",
-    tech: "Figma UI/UX, Design Systems, Human-Computer Interaction",
-    desc: "Interactive mobile wireframes and high-fidelity prototype simulating digital ticketing, live schedule tracking, and accessible navigation for Autonomous Rapid Transit.",
+    tech: "Figma UI/UX, Design Systems, Mobile Interaction Design",
+    desc: "A high-fidelity mobile prototype developed for the Sarawak Autonomous Rapid Transit initiative. Features real-time schedule inquiries, route mapping, smart mobile ticketing, and digital validation, adhering strictly to touch target ergonomics and WCAG contrast standards.",
     repo: "https://www.figma.com/design/LQoZXhRaH7iUulW9eQFGgK/UiUx-project-protoype"
   },
   4: {
-    title: "SDG Driver Safety & Rewards Application",
-    tech: "Java, Java Swing, OOD",
-    desc: "Desktop application aligned with UN SDG 11 (Sustainable Cities) evaluating driver safety scores, milestone achievements, and GUI progress indicators.",
-    repo: "https://github.com/mol-sar/thedesktopapplication"
+    title: "SDG Driver Safety & Milestones Tracker",
+    tech: "Java, Java Swing GUI, Event-Driven Architecture",
+    desc: "Desktop evaluation software created in support of UN Sustainable Development Goal 11 (Sustainable Cities and Communities). Integrates an interactive Java Swing interface featuring custom progress tracking, badging mechanics, and safety metric evaluation logic.",
+    repo: "https://github.com/mol-sar"
   },
   5: {
-    title: "Pet Hotel Management System",
-    tech: "C++, Abstract Base Classes, Virtual Functions",
-    desc: "Comprehensive terminal application utilizing pure virtual functions, polymorphism, and dynamic memory references across Pet Owner and Staff management portals.",
-    repo: "https://github.com/mol-sar/Pet-Hotel-System"
+    title: "Pet Hotel Hospitality Management System",
+    tech: "C++, Abstract Base Classes, Virtual Functions, Pointers",
+    desc: "An object-oriented terminal application developed in C++ demonstrating polymorphic architecture. Implements an abstract base class (UserMenu) with pure virtual dispatch, pointer-referenced data containers, and role-specific operational workflows.",
+    repo: "https://github.com/mol-sar"
   }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Dynamic Copyright Year
+  // 1. Dynamic Footer Year
   const yearEl = document.getElementById("current-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // 2. Dark / Light Theme Toggle with LocalStorage Persistence
+  // 2. Dark / Light Theme Toggle with LocalStorage
   const themeToggle = document.getElementById("theme-toggle");
   const currentTheme = localStorage.getItem("site-theme") || "dark";
   document.documentElement.setAttribute("data-theme", currentTheme);
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.textContent = nextTheme === "dark" ? "☀️" : "🌙";
   });
 
-  // 3. Mobile Navigation Menu Toggle
+  // 3. Mobile Hamburger Menu Toggle
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
 
@@ -59,19 +59,19 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("open");
   });
 
-  // 4. Auto-Close Mobile Menu on Link Click
+  // 4. Close Mobile Menu on Nav Click
   document.querySelectorAll(".nav-link").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("open");
     });
   });
 
-  // 5. Sticky Navbar Shadow & Scroll-to-Top Button Visibility
+  // 5. Sticky Navbar Shadow & Scroll-to-Top Button
   const navbar = document.getElementById("navbar");
   const scrollTopBtn = document.getElementById("scroll-top-btn");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 40) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
@@ -84,12 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 6. Scroll-to-Top Action
+  // 6. Scroll to Top Action
   scrollTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // 7. Active Nav Link on Scroll via IntersectionObserver
+  // 7. Active Nav Link via IntersectionObserver
   const sections = document.querySelectorAll("section[id]");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -100,13 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
-  }, { threshold: 0.4 });
-
-  sections.forEach(section => observer.observe(section));
+  }, { threshold: 0.3 });
+  sections.forEach(sec => observer.observe(sec));
 
   // 8. Project Category Filter
   const filterBtns = document.querySelectorAll(".filter-btn");
-  const projectCards = document.querySelectorAll(".project-card");
+  const portfolioCards = document.querySelectorAll(".portfolio-card");
 
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -114,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.add("active");
 
       const filter = btn.getAttribute("data-filter");
-      projectCards.forEach(card => {
+      portfolioCards.forEach(card => {
         const category = card.getAttribute("data-category");
         if (filter === "all" || category === filter) {
           card.style.display = "flex";
@@ -125,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 9. Interactive Project Modal Dialog
+  // 9. Interactive Modal Dialog
   const modal = document.getElementById("project-modal");
   const modalTitle = document.getElementById("modal-title");
   const modalTech = document.getElementById("modal-tech");
@@ -152,8 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".view-details-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      const id = btn.getAttribute("data-id");
-      openModal(id);
+      openModal(btn.getAttribute("data-id"));
     });
   });
 
@@ -163,55 +161,64 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
   });
 
-  // 10. Live Character Counter for Contact Form Textarea
+  // 10. Skills Carousel Navigation Buttons
+  const skillsTrack = document.getElementById("skills-track");
+  const skillPrev = document.getElementById("skill-prev");
+  const skillNext = document.getElementById("skill-next");
+
+  if (skillPrev && skillNext && skillsTrack) {
+    skillPrev.addEventListener("click", () => {
+      skillsTrack.scrollBy({ left: -240, behavior: "smooth" });
+    });
+    skillNext.addEventListener("click", () => {
+      skillsTrack.scrollBy({ left: 240, behavior: "smooth" });
+    });
+  }
+
+  // 11. Contact Form Character Counter & Validation
   const messageInput = document.getElementById("message");
   const charCount = document.getElementById("char-count");
+  const contactForm = document.getElementById("contact-form");
 
   messageInput.addEventListener("input", () => {
     charCount.textContent = messageInput.value.length;
   });
 
-  // 11. Front-end Contact Form Validation & Simulated Submission
-  const contactForm = document.getElementById("contact-form");
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const nameError = document.getElementById("name-error");
-  const emailError = document.getElementById("email-error");
-  const msgError = document.getElementById("msg-error");
-  const feedback = document.getElementById("form-feedback");
-
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     let isValid = true;
 
-    // Reset error messages
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const nameError = document.getElementById("name-error");
+    const emailError = document.getElementById("email-error");
+    const msgError = document.getElementById("msg-error");
+    const feedback = document.getElementById("form-feedback");
+
     nameError.textContent = "";
     emailError.textContent = "";
     msgError.textContent = "";
     feedback.textContent = "";
 
-    // Name Validation
     if (nameInput.value.trim().length < 2) {
-      nameError.textContent = "Please enter a valid name (at least 2 characters).";
+      nameError.textContent = "Please enter your name (min 2 characters).";
       isValid = false;
     }
 
-    // Email Validation (Regex)
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(emailInput.value.trim())) {
       emailError.textContent = "Please enter a valid email address.";
       isValid = false;
     }
 
-    // Message Validation
     if (messageInput.value.trim().length < 10) {
-      msgError.textContent = "Message must be at least 10 characters long.";
+      msgError.textContent = "Message must be at least 10 characters.";
       isValid = false;
     }
 
     if (isValid) {
-      feedback.style.color = "var(--success)";
-      feedback.textContent = "Message received! Thank you for getting in touch.";
+      feedback.style.color = "var(--accent)";
+      feedback.textContent = "Thank you! Your message has been sent successfully.";
       contactForm.reset();
       charCount.textContent = "0";
     }
