@@ -1,30 +1,33 @@
 /* CSS Custom Properties for Theming */
+:/* Custom Earthy Palette: Slate, Pebble, Wool, Peanut, Cream & Cotton */
 :root {
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --bg-primary: #12141a;
-  --bg-secondary: #1a1e26;
-  --bg-card: #222733;
-  --text-main: #f0f2f5;
-  --text-muted: #9aa4b2;
-  --accent: #4f8cf6;
-  --accent-hover: #3b74db;
-  --border-color: #2e3646;
-  --success: #2ecc71;
-  --error: #e74c3c;
+  
+  /* Dark / Slate Mode (Default) */
+  --bg-primary: #3d3439;       /* Deep Slate background */
+  --bg-secondary: #4a4046;     /* Lighter Slate container */
+  --bg-card: #332b30;          /* Deep Slate card fill */
+  --text-main: #f8f8f5;        /* Cotton white text */
+  --text-muted: #c6bdae;       /* Wool soft text */
+  --accent: #b9937b;          /* Peanut warm accent */
+  --accent-hover: #cfab93;    /* Highlighted peanut */
+  --border-color: #584c53;     /* Pebble-tinted border */
+  --success: #6ea371;
+  --error: #d96b63;
   --transition: all 0.25s ease;
 }
 
 [data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-secondary: #ffffff;
-  --bg-card: #f1f5f9;
-  --text-main: #0f172a;
-  --text-muted: #64748b;
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
-  --border-color: #cbd5e1;
+  /* Light / Cream & Wool Mode */
+  --bg-primary: #f8f8f5;       /* Cotton crisp base */
+  --bg-secondary: #f3ede2;     /* Cream secondary sections */
+  --bg-card: #ffffff;          /* Clean white cards */
+  --text-main: #3d3439;        /* Slate dark readable text */
+  --text-muted: #8f817f;       /* Pebble muted text */
+  --accent: #b9937b;          /* Peanut warm accent */
+  --accent-hover: #9c7862;    /* Darker peanut on hover */
+  --border-color: #c6bdae;     /* Wool soft borders */
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
