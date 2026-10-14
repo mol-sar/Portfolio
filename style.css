@@ -218,8 +218,9 @@ html {
 }
 .filter-btn.active, .filter-btn:hover {
   background: var(--accent);
-  color: #fff;
+  color: var(--btn-text);
   border-color: var(--accent);
+  font-weight: 600;
 }
 
 .projects-grid {
@@ -242,23 +243,22 @@ html {
 }
 
 .badge {
-  background: var(--bg-secondary);
-  color: var(--text-muted);
-  border: 1px solid var(--border-color);
+ background: rgba(224, 169, 109, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(224, 169, 109, 0.3);
+  font-weight: 600;
 }
 .project-card h3 { margin: 0.8rem 0; font-size: 1.2rem; }
 .project-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; flex-grow: 1; }
 .btn-card {
-  margin-top: 1.2rem;
-  background: transparent;
   color: var(--accent);
   border: 1px solid var(--accent);
-  padding: 0.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: var(--transition);
+  background: transparent;
+  transition: all 0.2s ease;
 }
-.btn-card:hover { background: var(--accent); color: #fff; }
+.btn-card:hover { background: var(--accent);
+  color: var(--btn-text);
+  box-shadow: 0 4px 14px rgba(224, 169, 109, 0.35); }
 
 /* Contact Form */
 .contact-wrapper { max-width: 550px; }
