@@ -8,67 +8,134 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Top Persistent Navbar -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#home" class="nav-logo">MD<span>.</span></a>
+      <a href="#home" class="nav-logo">Melkha Dunian<span>.</span></a>
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
       <nav class="nav-links" id="nav-links">
         <a href="#home" class="nav-link active">Home</a>
+        <a href="#services" class="nav-link">What I Do</a>
         <a href="#about" class="nav-link">About Me</a>
-        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#skills" class="nav-link">Skills</a>
         <a href="#contact" class="nav-link">Contact</a>
-        <button id="theme-toggle" class="btn-theme" aria-label="Toggle theme">☀️</button>
+        <button id="theme-toggle" class="btn-theme" aria-label="Toggle light/dark theme">☀️</button>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Home / Hero Section -->
+    <!-- 1. Hero Section (Split Layout) -->
     <section id="home" class="section hero">
-      <div class="container hero-content">
-        <p class="tagline">Hello, I'm</p>
-        <h1 class="hero-title">Melkha Dunian</h1>
-        <h2 class="hero-subtitle">Software Development • Computer Graphics • UI/UX Design</h2>
-        <p class="hero-desc">
-          Experienced in building computer graphics engines, relational database architectures, and intuitive UI/UX prototypes.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="tagline">Hi There!</p>
+          <h1 class="hero-title">I'm Melkha Dunian</h1>
+          <div class="hero-badge">Multimedia Computing & Software Developer</div>
+          <p class="hero-desc">
+            Undergraduate at Universiti Malaysia Sarawak (UNIMAS). I build custom 2D computer graphics pipelines, normalized relational database applications, and accessible UI/UX interaction systems.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Hire Me</a>
+            <a href="#portfolio" class="btn btn-secondary">View My Work</a>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
-              I am a Computer Science undergraduate majoring in Multimedia Computing at Universiti Malaysia Sarawak (UNIMAS). My work spans systems programming with C++ and OpenGL, backend database systems with MySQL/MariaDB, and human-computer interaction design in Figma.
-            </p>
-            <h3>Core Technical Skills</h3>
-            <ul class="skills-list">
-              <li>C++ / OpenGL / GLUT</li>
-              <li>Java / Swing / OOP</li>
-              <li>PHP & MySQL / MariaDB</li>
-              <li>HTML5, CSS & JavaScript</li>
-              <li>Figma UI/UX Prototyping</li>
-              <li>Linux / Fedora KDE</li>
-            </ul>
+        <div class="hero-image-wrapper">
+          <div class="image-box profile-box" id="profile-pic-container">
+            <!-- Replace images/profile.jpg once uploaded, placeholder stays visible if absent -->
+            <img src="images/profile.jpg" alt="Melkha Dunian Portrait" onerror="this.style.display='none'">
+            <div class="box-placeholder">Photo Placeholder</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section (5 Projects with Filter Buttons) -->
-    <section id="projects" class="section">
+    <!-- 2. What I Do Section (3 Column Cards) -->
+    <section id="services" class="section">
       <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-        
-        <!-- Category Filter -->
+        <div class="section-heading text-center">
+          <h2 class="section-title">What I Do</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-media placeholder-media">
+              <span>Graphics & Simulation</span>
+            </div>
+            <h3>Computer Graphics & Engines</h3>
+            <p>Developing low-level 2D graphics systems, rendering loops, and geometric transformations in C++ using legacy OpenGL primitives and GLUT.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-media placeholder-media">
+              <span>Database Architecture</span>
+            </div>
+            <h3>Backend Database Systems</h3>
+            <p>Architecting relational database management systems using MariaDB/MySQL with schemas normalized from 1NF to 3NF for transactional integrity.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-media placeholder-media">
+              <span>Figma & Design Systems</span>
+            </div>
+            <h3>UI/UX Interaction Design</h3>
+            <p>Crafting high-fidelity interactive wireframes, clickable prototypes, and accessible digital design systems with clean touch-ergonomics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. About Me Section (Framed Layout) -->
+    <section id="about" class="section section-alt">
+      <div class="container about-grid">
+        <div class="about-image-wrapper">
+          <div class="offset-frame">
+            <div class="image-box" id="about-pic-container">
+              <img src="images/about.jpg" alt="Melkha Dunian Working" onerror="this.style.display='none'">
+              <div class="box-placeholder">Workspace / Dev Photo</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <h2 class="section-title">About Me</h2>
+          <div class="title-underline"></div>
+          <p class="about-lead">
+            I am a Computer Science undergraduate majoring in <strong>Multimedia Computing with Honours</strong> at Universiti Malaysia Sarawak (UNIMAS).
+          </p>
+          <p class="about-text">
+            My work pairs technical systems thinking—such as memory management and event loops—with interactive user experience design. I have designed custom 2D simulation runners, full-stack auction platforms, and comprehensive driver safety apps.
+          </p>
+
+          <div class="checklist">
+            <div class="check-item">
+              <span class="check-icon">✔</span>
+              <span><strong>Systems & Graphics:</strong> C++, OpenGL, Object-Oriented Architecture</span>
+            </div>
+            <div class="check-item">
+              <span class="check-icon">✔</span>
+              <span><strong>Databases & Web:</strong> PHP, MariaDB / MySQL (3NF Relational Schemas)</span>
+            </div>
+            <div class="check-item">
+              <span class="check-icon">✔</span>
+              <span><strong>Application & Prototyping:</strong> Java Swing GUI, Figma UI/UX Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Portfolio Section (2x2 Grid with Filter) -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2 class="section-title">Portfolio</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <!-- Filter Controls -->
         <div class="filter-controls">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="cpp">C++ & Graphics</button>
@@ -77,85 +144,162 @@
           <button class="filter-btn" data-filter="java">Java</button>
         </div>
 
-        <div class="projects-grid" id="projects-grid">
+        <div class="portfolio-grid" id="portfolio-grid">
           <!-- Project 1 -->
-          <article class="project-card" data-category="cpp" data-id="1">
-            <div class="project-header">
-              <span class="badge">C++ / OpenGL</span>
+          <article class="portfolio-card" data-category="cpp" data-id="1">
+            <div class="card-thumb">
+              <img src="images/ecominer.png" alt="EcoMiner 2D Screenshot" onerror="this.style.display='none'">
+              <div class="thumb-placeholder">EcoMiner 2D Preview</div>
             </div>
-            <h3>EcoMiner 2D Game Engine</h3>
-            <p>Interactive 2D mining graphics engine developed using OpenGL primitives and modular OOP architecture.</p>
-            <button class="btn-card view-details-btn" data-id="1">View Details</button>
+            <div class="card-body">
+              <span class="badge">C++ &bull; OpenGL</span>
+              <h3>EcoMiner 2D Game Engine</h3>
+              <p>A collaborative Computer Graphics project building a standalone 2D mining game engine from scratch in C++ and OpenGL.</p>
+              <button class="btn-card view-details-btn" data-id="1">View Technical Specs</button>
+            </div>
           </article>
 
           <!-- Project 2 -->
-          <article class="project-card" data-category="web" data-id="2">
-            <div class="project-header">
-              <span class="badge">PHP / MariaDB</span>
+          <article class="portfolio-card" data-category="web" data-id="2">
+            <div class="card-thumb">
+              <img src="images/shaa.png" alt="Sarawak Heritage Auction Screenshot" onerror="this.style.display='none'">
+              <div class="thumb-placeholder">SHAA Web Portal Preview</div>
             </div>
-            <h3>Sarawak Heritage Online Auction (SHAA)</h3>
-            <p>Relational database management system and web portal normalized to 3NF for cultural auction transactions.</p>
-            <button class="btn-card view-details-btn" data-id="2">View Details</button>
+            <div class="card-body">
+              <span class="badge">PHP &bull; MariaDB</span>
+              <h3>Sarawak Heritage Online Auction</h3>
+              <p>Relational database management system and web portal normalized to 3NF for cultural auction transactions.</p>
+              <button class="btn-card view-details-btn" data-id="2">View Technical Specs</button>
+            </div>
           </article>
 
           <!-- Project 3 -->
-          <article class="project-card" data-category="uiux" data-id="3">
-            <div class="project-header">
-              <span class="badge">Figma</span>
+          <article class="portfolio-card" data-category="uiux" data-id="3">
+            <div class="card-thumb">
+              <img src="images/art-prototype.png" alt="ART Mobile Prototype" onerror="this.style.display='none'">
+              <div class="thumb-placeholder">ART Figma Wireframe Preview</div>
             </div>
-            <h3>ART Mobile Application Prototype</h3>
-            <p>Interactive UI/UX mobile prototype for Autonomous Rapid Transit ticketing and transit routing.</p>
-            <button class="btn-card view-details-btn" data-id="3">View Details</button>
+            <div class="card-body">
+              <span class="badge">Figma &bull; UI/UX</span>
+              <h3>ART Mobile Application Prototype</h3>
+              <p>Interactive UI/UX mobile prototype for Autonomous Rapid Transit ticketing and transit routing.</p>
+              <button class="btn-card view-details-btn" data-id="3">View Technical Specs</button>
+            </div>
           </article>
 
           <!-- Project 4 -->
-          <article class="project-card" data-category="java" data-id="4">
-            <div class="project-header">
-              <span class="badge">Java / Swing</span>
+          <article class="portfolio-card" data-category="java" data-id="4">
+            <div class="card-thumb">
+              <img src="images/sdg-driver.png" alt="SDG Driver Safety App" onerror="this.style.display='none'">
+              <div class="thumb-placeholder">SDG Driver App Preview</div>
             </div>
-            <h3>SDG Driver Safety & Rewards Application</h3>
-            <p>Desktop application built around UN SDG 11 using Swing GUI to analyze driver metrics and reward safe habits.</p>
-            <button class="btn-card view-details-btn" data-id="4">View Details</button>
+            <div class="card-body">
+              <span class="badge">Java &bull; Swing GUI</span>
+              <h3>SDG Driver Safety & Milestones</h3>
+              <p>Desktop application built around UN SDG 11 using Java Swing to evaluate driver metrics and award safety badges.</p>
+              <button class="btn-card view-details-btn" data-id="4">View Technical Specs</button>
+            </div>
           </article>
 
           <!-- Project 5 -->
-          <article class="project-card" data-category="cpp" data-id="5">
-            <div class="project-header">
-              <span class="badge">C++ OOP</span>
+          <article class="portfolio-card" data-category="cpp" data-id="5">
+            <div class="card-thumb">
+              <img src="images/pet-hotel.png" alt="Pet Hotel Terminal Preview" onerror="this.style.display='none'">
+              <div class="thumb-placeholder">Pet Hotel Terminal Preview</div>
             </div>
-            <h3>Pet Hotel Management System</h3>
-            <p>Console software employing abstract base classes, inheritance, and pointer-driven staff and owner modules.</p>
-            <button class="btn-card view-details-btn" data-id="5">View Details</button>
+            <div class="card-body">
+              <span class="badge">C++ &bull; Systems OOP</span>
+              <h3>Pet Hotel Hospitality Management</h3>
+              <p>Console software employing abstract base classes, inheritance, and pointer-driven staff and owner modules.</p>
+              <button class="btn-card view-details-btn" data-id="5">View Technical Specs</button>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- 5. Skills Section (Icon Cards / Carousel) -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2 class="section-title">Skills & Proficiencies</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="skills-carousel-wrapper">
+          <button class="carousel-nav prev" id="skill-prev" aria-label="Previous skills">&lt;</button>
+          <div class="skills-track" id="skills-track">
+            <div class="skill-tile">
+              <div class="skill-icon">&lt;/&gt;</div>
+              <h4>C++ / OpenGL</h4>
+              <p>Graphics math, GLUT pipelines, OOP hierarchy, and memory management</p>
+            </div>
+            <div class="skill-tile">
+              <div class="skill-icon">☕</div>
+              <h4>Java Development</h4>
+              <p>Swing GUI interfaces, event-driven programming, and modular OOP architecture</p>
+            </div>
+            <div class="skill-tile">
+              <div class="skill-icon">🗄️</div>
+              <h4>Database Design</h4>
+              <p>MariaDB, MySQL, 1NF-3NF schema normalization, and ACID transactions</p>
+            </div>
+            <div class="skill-tile">
+              <div class="skill-icon">🎨</div>
+              <h4>UI/UX Prototyping</h4>
+              <p>Figma design systems, interactive mobile wireframes, and WCAG accessibility</p>
+            </div>
+            <div class="skill-tile">
+              <div class="skill-icon">🐧</div>
+              <h4>Linux & Tooling</h4>
+              <p>Fedora KDE desktop, Git version control, Flatpak, and VS Code workflows</p>
+            </div>
+          </div>
+          <button class="carousel-nav next" id="skill-next" aria-label="Next skills">&gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Pre-Footer Callout Banner -->
+    <section class="cta-banner">
+      <div class="container text-center">
+        <h2>HAVE A PROJECT IN MIND? LET'S BUILD SOMETHING GREAT TOGETHER.</h2>
+        <div class="banner-actions">
+          <a href="#contact" class="btn btn-primary">Hire Me</a>
+          <a href="#portfolio" class="btn btn-secondary">View My Work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Contact Section -->
     <section id="contact" class="section">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
+        <div class="section-heading text-center">
+          <h2 class="section-title">Contact</h2>
+          <div class="title-underline"></div>
+        </div>
+
         <div class="contact-wrapper">
           <form id="contact-form" class="contact-form" novalidate>
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required placeholder="Your Name">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required placeholder="Melkha Dunian">
               <span class="error-msg" id="name-error"></span>
             </div>
 
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required placeholder="your.name@example.com">
               <span class="error-msg" id="email-error"></span>
             </div>
 
             <div class="form-group">
               <label for="message">Message (<span id="char-count">0</span>/250)</label>
-              <textarea id="message" name="message" rows="4" maxlength="250" required placeholder="Type your message..."></textarea>
+              <textarea id="message" name="message" rows="4" maxlength="250" required placeholder="Tell me about your project or inquiry..."></textarea>
               <span class="error-msg" id="msg-error"></span>
             </div>
 
-            <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">Send Message</button>
             <div id="form-feedback" class="form-feedback"></div>
           </form>
         </div>
@@ -163,7 +307,26 @@
     </section>
   </main>
 
-  <!-- Project Details Modal -->
+  <!-- Two-Column Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>Melkha Dunian</h3>
+        <p class="brand-sub">Computer Science (Multimedia Computing) &bull; UNIMAS</p>
+        <p class="copyright">&copy; <span id="current-year"></span> Melkha Dunian. All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <ul class="contact-list">
+          <li><strong>GitHub:</strong> <a href="https://github.com/mol-sar" target="_blank" rel="noopener">github.com/mol-sar</a></li>
+          <li><strong>Campus:</strong> Universiti Malaysia Sarawak, Kota Samarahan</li>
+          <li><strong>Repository:</strong> <a href="https://github.com/mol-sar/Portfolio" target="_blank" rel="noopener">mol-sar/Portfolio</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Component -->
   <div class="modal" id="project-modal" aria-hidden="true" role="dialog">
     <div class="modal-backdrop" id="modal-backdrop"></div>
     <div class="modal-content">
@@ -175,14 +338,7 @@
     </div>
   </div>
 
-  <!-- Scroll to Top Button -->
   <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="current-year"></span> Melkha Dunian. Hosted on GitHub Pages.</p>
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
