@@ -231,7 +231,43 @@ html {
   margin-bottom: 0.8rem;
   width: 100%;
 }
+/* Container for the filter buttons */
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
 
+/* Individual Filter Pill Buttons */
+.filter-btn {
+  background: var(--bg-card);          /* Dark Slate card background */
+  color: var(--text-muted);             /* Soft muted text */
+  border: 1px solid var(--border-color); /* Subtle slate border */
+  padding: 0.5rem 1.1rem;
+  border-radius: 9999px;                /* Fully rounded pill shape */
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover state */
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--text-main);
+  background: var(--bg-secondary);
+}
+
+/* Active / Selected Button */
+.filter-btn.active {
+  background: var(--accent);            /* Warm accent background */
+  color: var(--bg-primary);             /* Dark contrast text */
+  border-color: var(--accent);
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
 .badge {
   display: inline-block;
   font-size: 0.78rem;
