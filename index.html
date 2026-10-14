@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melkha Dunian | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">MD<span>.</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="theme-toggle" class="btn-theme" aria-label="Toggle theme">☀️</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home / Hero Section -->
+    <section id="home" class="section hero">
+      <div class="container hero-content">
+        <p class="tagline">Hello, I'm</p>
+        <h1 class="hero-title">Melkha Dunian</h1>
+        <h2 class="hero-subtitle">Multimedia Computing & Software Development</h2>
+        <p class="hero-desc">
+          Building computer graphics engines, relational database architectures, and intuitive UI/UX prototypes.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a Computer Science undergraduate majoring in Multimedia Computing at Universiti Malaysia Sarawak (UNIMAS). My work spans systems programming with C++ and OpenGL, backend database systems with MySQL/MariaDB, and human-computer interaction design in Figma.
+            </p>
+            <h3>Core Technical Skills</h3>
+            <ul class="skills-list">
+              <li>C++ / OpenGL / GLUT</li>
+              <li>Java / Swing / OOP</li>
+              <li>PHP & MySQL / MariaDB</li>
+              <li>HTML5, CSS3 & JavaScript</li>
+              <li>Figma UI/UX Prototyping</li>
+              <li>Linux / Fedora KDE</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (5 Projects with Filter Buttons) -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <!-- Category Filter -->
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="cpp">C++ & Graphics</button>
+          <button class="filter-btn" data-filter="web">Web & SQL</button>
+          <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+          <button class="filter-btn" data-filter="java">Java</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card" data-category="cpp" data-id="1">
+            <div class="project-header">
+              <span class="badge">C++ / OpenGL</span>
+            </div>
+            <h3>EcoMiner 2D Game Engine</h3>
+            <p>Interactive 2D mining graphics engine developed using OpenGL primitives and modular OOP architecture.</p>
+            <button class="btn-card view-details-btn" data-id="1">View Details</button>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-category="web" data-id="2">
+            <div class="project-header">
+              <span class="badge">PHP / MariaDB</span>
+            </div>
+            <h3>Sarawak Heritage Online Auction (SHAA)</h3>
+            <p>Relational database management system and web portal normalized to 3NF for cultural auction transactions.</p>
+            <button class="btn-card view-details-btn" data-id="2">View Details</button>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-category="uiux" data-id="3">
+            <div class="project-header">
+              <span class="badge">Figma</span>
+            </div>
+            <h3>ART Mobile Application Prototype</h3>
+            <p>Interactive UI/UX mobile prototype for Autonomous Rapid Transit ticketing and transit routing.</p>
+            <button class="btn-card view-details-btn" data-id="3">View Details</button>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card" data-category="java" data-id="4">
+            <div class="project-header">
+              <span class="badge">Java / Swing</span>
+            </div>
+            <h3>SDG Driver Safety & Rewards Application</h3>
+            <p>Desktop application built around UN SDG 11 using Swing GUI to analyze driver metrics and reward safe habits.</p>
+            <button class="btn-card view-details-btn" data-id="4">View Details</button>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card" data-category="cpp" data-id="5">
+            <div class="project-header">
+              <span class="badge">C++ OOP</span>
+            </div>
+            <h3>Pet Hotel Management System</h3>
+            <p>Console software employing abstract base classes, inheritance, and pointer-driven staff and owner modules.</p>
+            <button class="btn-card view-details-btn" data-id="5">View Details</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-wrapper">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your Name">
+              <span class="error-msg" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+              <span class="error-msg" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message (<span id="char-count">0</span>/250)</label>
+              <textarea id="message" name="message" rows="4" maxlength="250" required placeholder="Type your message..."></textarea>
+              <span class="error-msg" id="msg-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+            <div id="form-feedback" class="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Details Modal -->
+  <div class="modal" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+      <h3 id="modal-title"></h3>
+      <p class="modal-category" id="modal-tech"></p>
+      <p id="modal-desc"></p>
+      <div class="modal-links" id="modal-links"></div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to top">↑</button>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> Melkha Dunian. Hosted on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
