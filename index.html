@@ -17,7 +17,7 @@
         <a href="#home" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About Me</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact Me</a>
+        <a href="#contact" class="nav-link">Contact</a>
         <button id="theme-toggle" class="btn-theme" aria-label="Toggle theme">☀️</button>
       </nav>
     </div>
@@ -27,98 +27,110 @@
     <!-- Home / Hero Section -->
     <section id="home" class="section hero">
       <div class="container hero-content">
-        <p class="tagline">Greetings, I'm</p>
+        <p class="tagline">Hello, I'm</p>
         <h1 class="hero-title">Melkha Dunian</h1>
-        <h2 class="hero-subtitle">Multimedia Computing</h2>
+        <h2 class="hero-subtitle">Software Development • Computer Graphics • UI/UX Design</h2>
         <p class="hero-desc">
-         Bridging technical system logic with human-centered digital experiences. Specialized in low-level graphics rendering (C++/OpenGL), relational database architecture (MariaDB/MySQL), and high-fidelity interaction design in Figma.
-    </p>
-    <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">Explore Featured Work</a>
-      <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- About Me Section -->
-<section id="about" class="section">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>
-          I am a Computer Science undergraduate majoring in <strong>Multimedia Computing with Honours</strong> at Universiti Malaysia Sarawak (UNIMAS). My approach pairs fundamental software engineering disciplines—such as memory management, object-oriented design, and normalized database schemas—with creative multimedia workflows, shader logic, and interactive user interfaces.
+          Experienced in building computer graphics engines, relational database architectures, and intuitive UI/UX prototypes.
         </p>
-        <p style="margin-top: 1rem; color: var(--text-muted); line-height: 1.6;">
-          Whether building 2D graphics simulation engines from scratch or prototyping accessible transit workflows, I focus on clean code structure, predictable state management, and intuitive user experiences.
-        </p>
-
-        <h3 style="margin-top: 2rem; margin-bottom: 0.8rem; font-size: 1.2rem;">Core Technical Proficiencies</h3>
-        <ul class="skills-list">
-          <li><strong>Languages:</strong> C++, Java, PHP, Python, SQL, C#, JavaScript</li>
-          <li><strong>Graphics & Systems:</strong> OpenGL, GLUT, Object-Oriented Architecture (OOP)</li>
-          <li><strong>Databases:</strong> MariaDB, MySQL (Schema Normalization 1NF–3NF)</li>
-          <li><strong>UI/UX Prototyping:</strong> Figma (Design Systems, Wireframing, Micro-interactions)</li>
-          <li><strong>Development Environments:</strong> Linux (Fedora KDE / Ubuntu), Git, Visual Studio Code</li>
-        </ul>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <!-- About Me Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I am a Computer Science undergraduate majoring in Multimedia Computing at Universiti Malaysia Sarawak (UNIMAS). My work spans systems programming with C++ and OpenGL, backend database systems with MySQL/MariaDB, and human-computer interaction design in Figma.
+            </p>
+            <h3>Core Technical Skills</h3>
+            <ul class="skills-list">
+              <li>C++ / OpenGL / GLUT</li>
+              <li>Java / Swing / OOP</li>
+              <li>PHP & MySQL / MariaDB</li>
+              <li>HTML5, CSS & JavaScript</li>
+              <li>Figma UI/UX Prototyping</li>
+              <li>Linux / Fedora KDE</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!<!-- Project 1: EcoMiner -->
-<article class="project-card" data-category="cpp" data-id="1">
-  <div class="project-header">
-    <span class="badge">C++ / OpenGL</span>
-  </div>
-  <h3>EcoMiner: 2D Mining Engine</h3>
-  <p>Standalone graphics simulation engine rendering dynamic procedural tilemaps, collision physics, and real-time primitive pipelines using legacy OpenGL and GLUT.</p>
-  <button class="btn-card view-details-btn" data-id="1">Technical Specs & Demo</button>
-</article>
+    <!-- Projects Section (5 Projects with Filter Buttons) -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <!-- Category Filter -->
+        <div class="filter-controls">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="cpp">C++ & Graphics</button>
+          <button class="filter-btn" data-filter="web">Web & SQL</button>
+          <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
+          <button class="filter-btn" data-filter="java">Java</button>
+        </div>
 
-<!-- Project 2: SHAA -->
-<article class="project-card" data-category="web" data-id="2">
-  <div class="project-header">
-    <span class="badge">PHP / MariaDB</span>
-  </div>
-  <h3>Sarawak Heritage Online Auction (SHAA)</h3>
-  <p>Full-stack relational database management system designed to normalize transaction flows, preserve inventory integrity, and handle real-time concurrent user bidding.</p>
-  <button class="btn-card view-details-btn" data-id="2">Technical Specs & Demo</button>
-</article>
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card" data-category="cpp" data-id="1">
+            <div class="project-header">
+              <span class="badge">C++ / OpenGL</span>
+            </div>
+            <h3>EcoMiner 2D Game Engine</h3>
+            <p>Interactive 2D mining graphics engine developed using OpenGL primitives and modular OOP architecture.</p>
+            <button class="btn-card view-details-btn" data-id="1">View Details</button>
+          </article>
 
-<!-- Project 3: ART Mobile App -->
-<article class="project-card" data-category="uiux" data-id="3">
-  <div class="project-header">
-    <span class="badge">UI/UX • Figma</span>
-  </div>
-  <h3>ART (Autonomous Rapid Transit) Prototype</h3>
-  <p>End-to-end interactive mobile app prototype engineered around transit routing, digital NFC boarding passes, and WCAG-compliant accessible UI flows.</p>
-  <button class="btn-card view-details-btn" data-id="3">Technical Specs & Demo</button>
-</article>
+          <!-- Project 2 -->
+          <article class="project-card" data-category="web" data-id="2">
+            <div class="project-header">
+              <span class="badge">PHP / MariaDB</span>
+            </div>
+            <h3>Sarawak Heritage Online Auction (SHAA)</h3>
+            <p>Relational database management system and web portal normalized to 3NF for cultural auction transactions.</p>
+            <button class="btn-card view-details-btn" data-id="2">View Details</button>
+          </article>
 
-<!-- Project 4: SDG Driver Safety -->
-<article class="project-card" data-category="java" data-id="4">
-  <div class="project-header">
-    <span class="badge">Java / Swing GUI</span>
-  </div>
-  <h3>SDG Driver Safety & Milestones Tracker</h3>
-  <p>Desktop application built around UN SDG 11 using Java Swing. Evaluates user driver safety habits, logs safety performance milestones, and calculates dynamic safety scores.</p>
-  <button class="btn-card view-details-btn" data-id="4">Technical Specs & Demo</button>
-</article>
+          <!-- Project 3 -->
+          <article class="project-card" data-category="uiux" data-id="3">
+            <div class="project-header">
+              <span class="badge">Figma</span>
+            </div>
+            <h3>ART Mobile Application Prototype</h3>
+            <p>Interactive UI/UX mobile prototype for Autonomous Rapid Transit ticketing and transit routing.</p>
+            <button class="btn-card view-details-btn" data-id="3">View Details</button>
+          </article>
 
-<!-- Project 5: Pet Hotel Management -->
-<article class="project-card" data-category="cpp" data-id="5">
-  <div class="project-header">
-    <span class="badge">C++ OOP</span>
-  </div>
-  <h3>Pet Hotel Hospitality Management System</h3>
-  <p>Polymorphic terminal software built with pure virtual abstract base classes, pointer-referenced data models, and separate operational staff/owner portal workflows.</p>
-  <button class="btn-card view-details-btn" data-id="5">Technical Specs & Demo</button>
-</article>
-    
-      
+          <!-- Project 4 -->
+          <article class="project-card" data-category="java" data-id="4">
+            <div class="project-header">
+              <span class="badge">Java / Swing</span>
+            </div>
+            <h3>SDG Driver Safety & Rewards Application</h3>
+            <p>Desktop application built around UN SDG 11 using Swing GUI to analyze driver metrics and reward safe habits.</p>
+            <button class="btn-card view-details-btn" data-id="4">View Details</button>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card" data-category="cpp" data-id="5">
+            <div class="project-header">
+              <span class="badge">C++ OOP</span>
+            </div>
+            <h3>Pet Hotel Management System</h3>
+            <p>Console software employing abstract base classes, inheritance, and pointer-driven staff and owner modules.</p>
+            <button class="btn-card view-details-btn" data-id="5">View Details</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section">
       <div class="container">
