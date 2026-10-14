@@ -3,7 +3,7 @@ const projectsData = {
   1: {
     title: "EcoMiner 2D Game Engine",
     tech: "C++, OpenGL, GLUT, Object-Oriented Programming",
-    desc: "A standalone 2D interactive game engine built from scratch. Implements real-time primitive rendering pipelines, collision checks, and clean class inheritance hierarchy.",
+    desc: "A standalone 2D interactive game engine built from scratch. Implements real-time primitive rendering pipelines, collision checks, and clean class inheritance hierarchy. The game develop from a collaborative group project under Computer Graphics.",
     repo: "https://github.com/mol-sar/ecominer2d"
   },
   2: {
@@ -22,13 +22,13 @@ const projectsData = {
     title: "SDG Driver Safety & Rewards Application",
     tech: "Java, Java Swing, OOD",
     desc: "Desktop application aligned with UN SDG 11 (Sustainable Cities) evaluating driver safety scores, milestone achievements, and GUI progress indicators.",
-    repo: "https://github.com/mol-sar"
+    repo: "https://github.com/mol-sar/thedesktopapplication"
   },
   5: {
     title: "Pet Hotel Management System",
     tech: "C++, Abstract Base Classes, Virtual Functions",
     desc: "Comprehensive terminal application utilizing pure virtual functions, polymorphism, and dynamic memory references across Pet Owner and Staff management portals.",
-    repo: "https://github.com/mol-sar"
+    repo: "https://github.com/mol-sar/Pet-Hotel-System"
   }
 };
 
