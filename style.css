@@ -1,4 +1,7 @@
-/* CSS Custom Properties for Theming */
+
+/* ___________________________________________________________
+   1. DESIGN SYSTEM & CSS VARIABLES
+  ___________________________________________________________*/
 :root {
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   
@@ -32,6 +35,10 @@
   --accent-hover: #736765;     
   --btn-text: #ffffff;
 }
+
+/*____________________________________________________________
+   2. GLOBAL BASE STYLES
+  ____________________________________________________________*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,11 +46,10 @@
 }
 
 html {
-  /*scroll-behavior: smooth;*/
- font-family: var(--font-family);
+  font-family: var(--font-family);
   color: var(--text-main);
   background: linear-gradient(165deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-  background-attachment: fixed; /* Keeps the gradient smooth while scrolling */
+  background-attachment: fixed;
   min-height: 100vh;
 }
 
@@ -54,7 +60,28 @@ html {
   padding: 2rem 0;
 }
 
-/* Navbar */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent);
+  margin-top: 6px;
+}
+
+/* ___________________________________________________________
+   3. NAVIGATION BAR
+   ___________________________________________________________ */
 .navbar {
   position: sticky;
   top: 0;
@@ -65,7 +92,7 @@ html {
 }
 
 .navbar.scrolled {
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
 }
 
 .nav-container {
@@ -84,7 +111,10 @@ html {
   color: var(--text-main);
   text-decoration: none;
 }
-.nav-logo span { color: var(--accent); }
+
+.nav-logo span { 
+  color: var(--accent); 
+}
 
 .nav-links {
   display: flex;
@@ -99,11 +129,13 @@ html {
   transition: var(--transition);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover, 
+.nav-link.active {
   color: var(--accent);
 }
 
-.btn-theme, .menu-toggle {
+.btn-theme, 
+.menu-toggle {
   background: transparent;
   border: 1px solid var(--border-color);
   color: var(--text-main);
@@ -112,13 +144,14 @@ html {
   cursor: pointer;
 }
 
-.menu-toggle { display: none; font-size: 1.2rem; }
-
-/* Sections */
-.section {
-  padding: 4rem 0;
+.menu-toggle { 
+  display: none; 
+  font-size: 1.2rem; 
 }
 
+/* ___________________________________________________________
+   4. HERO & ABOUT ME SECTIONS
+  ___________________________________________________________ */
 .hero {
   min-height: 70vh;
   display: flex;
@@ -130,26 +163,50 @@ html {
   );
 }
 
-.tagline { color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; }
-.hero-title { font-size: 2.8rem; margin-bottom: 0.5rem; }
-.hero-subtitle { font-size: 1.3rem; color: var(--text-muted); font-weight: 400; margin-bottom: 1.2rem; }
-.hero-desc { max-width: 600px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.8rem; }
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  position: relative;
-}
-.section-title::after {
-  content: "";
-  display: block;
-  width: 40px;
-  height: 3px;
-  background-color: var(--accent);
-  margin-top: 6px;
+.tagline { 
+  color: var(--accent); 
+  font-weight: 600; 
+  margin-bottom: 0.5rem; 
 }
 
-/* Buttons */
+.hero-title { 
+  font-size: 2.8rem; 
+  margin-bottom: 0.5rem; 
+}
+
+.hero-subtitle { 
+  font-size: 1.3rem; 
+  color: var(--text-muted); 
+  font-weight: 400; 
+  margin-bottom: 1.2rem; 
+}
+
+.hero-desc { 
+  max-width: 600px; 
+  color: var(--text-muted); 
+  line-height: 1.6; 
+  margin-bottom: 1.8rem; 
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.skills-list li {
+  background: var(--bg-card);
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border: 1px solid var(--border-color);
+}
+
+/* ___________________________________________________________
+   5. GENERAL BUTTONS
+   ___________________________________________________________*/
 .btn {
   display: inline-block;
   padding: 0.7rem 1.4rem;
@@ -160,6 +217,7 @@ html {
   border: none;
   transition: var(--transition);
 }
+
 .btn-primary {
   background: var(--accent);
   color: var(--btn-text);
@@ -183,23 +241,47 @@ html {
   background: var(--bg-card);
   border-color: var(--accent);
 }
-/* Skills List */
-.skills-list {
+
+/* ___________________________________________________________
+   6. PROJECTS FILTER CONTROLS
+   ___________________________________________________________ */
+.filter-controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
-  margin-top: 1rem;
-  list-style: none;
-}
-.skills-list li {
-  background: var(--bg-card);
-  padding: 0.4rem 0.9rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  border: 1px solid var(--border-color);
+  gap: 0.6rem;
+  margin-bottom: 2rem;
 }
 
-/* Projects Grid and Cards*/
+.filter-btn {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--accent);
+  color: var(--text-main);
+  background: var(--bg-secondary);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: var(--btn-text);
+  border-color: var(--accent);
+  font-weight: 600;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* ___________________________________________________________
+   7. PROJECTS GRID & CARDS
+   ___________________________________________________________ */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -213,8 +295,8 @@ html {
   border-radius: 10px;
   padding: 1.6rem;
   display: flex;
-  flex-direction: column; /* Stacks elements vertically */
-  align-items: flex-start; /* Aligns content to the left */
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   text-align: left;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -226,7 +308,6 @@ html {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
-/* Category / Language Badge */
 .project-header {
   margin-bottom: 0.8rem;
   width: 100%;
@@ -259,47 +340,9 @@ html {
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 1.4rem;
-  flex-grow: 1; /* Pushes button cleanly to the bottom */
-}
-/* Container for the filter buttons */
-.filter-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-bottom: 2rem;
+  flex-grow: 1;
 }
 
-/* Individual Filter Pill Buttons */
-.filter-btn {
-  background: var(--bg-card);          /* Dark Slate card background */
-  color: var(--text-muted);             /* Soft muted text */
-  border: 1px solid var(--border-color); /* Subtle slate border */
-  padding: 0.5rem 1.1rem;
-  border-radius: 9999px;                /* Fully rounded pill shape */
-  font-size: 0.88rem;
-  font-weight: 500;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.2s ease;
-}
-
-/* Hover state */
-.filter-btn:hover {
-  border-color: var(--accent);
-  color: var(--text-main);
-  background: var(--bg-secondary);
-}
-
-/* Active / Selected Button */
-.filter-btn.active {
-  background: var(--accent);            /* Warm accent background */
-  color: var(--bg-primary);             /* Dark contrast text */
-  border-color: var(--accent);
-  font-weight: 600;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
-}
-
-/* Action Button */
 .btn-card {
   align-self: flex-start;
   padding: 0.55rem 1.2rem;
@@ -315,15 +358,29 @@ html {
 
 .btn-card:hover {
   background: var(--accent);
-  color: var(--bg-primary);
+  color: var(--btn-text);
   box-shadow: 0 4px 12px rgba(224, 169, 109, 0.3);
 }
 
-/* Contact Form */
-.contact-wrapper { max-width: 550px; }
-.form-group { margin-bottom: 1.2rem; }
-.form-group label { display: block; margin-bottom: 0.4rem; font-size: 0.9rem; }
-.form-group input, .form-group textarea {
+/*___________________________________________________________
+   8. CONTACT FORM
+  ___________________________________________________________ */
+.contact-wrapper { 
+  max-width: 550px; 
+}
+
+.form-group { 
+  margin-bottom: 1.2rem; 
+}
+
+.form-group label { 
+  display: block; 
+  margin-bottom: 0.4rem; 
+  font-size: 0.9rem; 
+}
+
+.form-group input, 
+.form-group textarea {
   width: 100%;
   padding: 0.75rem;
   background: var(--bg-secondary);
@@ -332,17 +389,48 @@ html {
   color: var(--text-main);
   font-family: inherit;
 }
-.form-group input:focus, .form-group textarea:focus {
+
+.form-group input:focus, 
+.form-group textarea:focus {
   outline: none;
   border-color: var(--accent);
 }
-.error-msg { color: var(--error); font-size: 0.8rem; display: block; margin-top: 0.2rem; }
-.form-feedback { margin-top: 1rem; font-weight: 500; font-size: 0.9rem; }
 
-/* Modal */
-.modal { display: none; position: fixed; inset: 0; z-index: 200; justify-content: center; align-items: center; }
-.modal.open { display: flex; }
-.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.error-msg { 
+  color: var(--error); 
+  font-size: 0.8rem; 
+  display: block; 
+  margin-top: 0.2rem; 
+}
+
+.form-feedback { 
+  margin-top: 1rem; 
+  font-weight: 500; 
+  font-size: 0.9rem; 
+}
+
+/* ___________________________________________________________
+   9. INTERACTIVE MODAL DIALOG
+   ___________________________________________________________ */
+.modal { 
+  display: none; 
+  position: fixed; 
+  inset: 0; 
+  z-index: 200; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.modal.open { 
+  display: flex; 
+}
+
+.modal-backdrop { 
+  position: absolute; 
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.6); 
+}
+
 .modal-content {
   position: relative;
   background: var(--bg-secondary);
@@ -353,17 +441,37 @@ html {
   width: 90%;
   z-index: 10;
 }
-.modal-close { position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer; }
-.modal-category { color: var(--accent); font-size: 0.9rem; margin-bottom: 1rem; }
-.modal-links { margin-top: 1.5rem; }
 
-/* Scroll Top Button */
+.modal-close { 
+  position: absolute; 
+  top: 1rem; 
+  right: 1rem; 
+  background: transparent; 
+  border: none; 
+  font-size: 1.5rem; 
+  color: var(--text-muted); 
+  cursor: pointer; 
+}
+
+.modal-category { 
+  color: var(--accent); 
+  font-size: 0.9rem; 
+  margin-bottom: 1rem; 
+}
+
+.modal-links { 
+  margin-top: 1.5rem; 
+}
+
+/*___________________________________________________________
+   10. SCROLL TO TOP & FOOTER
+   ___________________________________________________________*/
 .scroll-top-btn {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   background: var(--accent);
-  color: #fff;
+  color: var(--btn-text);
   border: none;
   width: 42px;
   height: 42px;
@@ -375,7 +483,10 @@ html {
   justify-content: center;
   transition: var(--transition);
 }
-.scroll-top-btn.visible { display: flex; }
+
+.scroll-top-btn.visible { 
+  display: flex; 
+}
 
 .footer {
   text-align: center;
@@ -385,9 +496,14 @@ html {
   font-size: 0.9rem;
 }
 
-/* Responsive Media Queries */
+/*   ___________________________________________________________
+   11. RESPONSIVE MEDIA QUERIES
+      ___________________________________________________________*/
 @media (max-width: 768px) {
-  .menu-toggle { display: block; }
+  .menu-toggle { 
+    display: block; 
+  }
+  
   .nav-links {
     display: none;
     position: absolute;
@@ -399,6 +515,12 @@ html {
     padding: 1.5rem 0;
     border-bottom: 1px solid var(--border-color);
   }
-  .nav-links.open { display: flex; }
-  .hero-title { font-size: 2.1rem; }
+  
+  .nav-links.open { 
+    display: flex; 
+  }
+  
+  .hero-title { 
+    font-size: 2.1rem; 
+  }
 }
