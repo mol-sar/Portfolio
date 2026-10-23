@@ -46,11 +46,7 @@
   object-fit: cover; /* Prevents stretching and crops nicely to the container */
   display: block;
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+
 
 /* ============================================================
    2. GLOBAL BASE STYLES
