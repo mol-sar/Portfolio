@@ -3,32 +3,32 @@ const projectsData = {
   1: {
     title: "EcoMiner: 2D Mining Simulation Engine",
     tech: "C++, OpenGL, GLUT, Object-Oriented Architecture",
-    desc: "A collaborative Computer Graphics group project building an interactive 2D mining game engine from scratch in C++ and OpenGL. Features custom primitive rendering pipelines, real-time bounding-box collision detection, and a modular OOP class hierarchy governing player physics and terrain deformation.",
+    desc: "A collaborative university project where we created an interactive 2D mining game engine from the ground up using C++ and OpenGL. I focused on drawing 2D shapes, handling smooth player physics, and detecting collisions when interacting with the game map.",
     repo: "https://github.com/mol-sar/ecominer2d"
   },
   2: {
     title: "Sarawak Heritage Online Auction (SHAA)",
     tech: "PHP, MariaDB / MySQL, Schema Normalization (1NF–3NF)",
-    desc: "A secure web portal and relational database system built with PHP and MariaDB/MySQL. Engineered an ACID-compliant schema normalized to 3NF to prevent transaction anomalies, featuring role-based access control (RBAC), multi-user concurrent bid tracking, and prepared SQL statements.",
+    desc: "A dynamic auction website for cultural items developed with PHP and MariaDB/MySQL. I structured the database using 3NF normalization rules to prevent duplicate data, keep transactions secure, and support multiple users bidding at the same time.",
     repo: "https://github.com/mol-sar/SHA"
   },
   3: {
     title: "ART Mobile Application Prototype",
     tech: "Figma UI/UX, Design Systems, Mobile Interaction Design",
-    desc: "A high-fidelity mobile prototype developed for the Sarawak Autonomous Rapid Transit initiative. Features real-time schedule inquiries, route mapping, smart mobile ticketing, and digital validation, adhering strictly to touch target ergonomics and WCAG contrast standards.",
+    desc: "A clickable mobile prototype built in Figma for Sarawak's public transit system. The app lets passengers look up train schedules, view route maps, and purchase digital tickets. Designed following mobile usability guidelines and accessible color contrast.",
     repo: "https://www.figma.com/design/LQoZXhRaH7iUulW9eQFGgK/UiUx-project-protoype"
   },
   4: {
-    title: "SDG Driver Safety & Milestones Tracker",
+    title: "SDG Driver Safety",
     tech: "Java, Java Swing GUI, Event-Driven Architecture",
     desc: "Desktop evaluation software created in support of UN Sustainable Development Goal 11 (Sustainable Cities and Communities). Integrates an interactive Java Swing interface featuring custom progress tracking, badging mechanics, and safety metric evaluation logic.",
-    repo: "https://github.com/mol-sar"
+    repo: "https://github.com/mol-sar/thedesktopapplication"
   },
   5: {
     title: "Pet Hotel Hospitality Management System",
     tech: "C++, Abstract Base Classes, Virtual Functions, Pointers",
-    desc: "An object-oriented terminal application developed in C++ demonstrating polymorphic architecture. Implements an abstract base class (UserMenu) with pure virtual dispatch, pointer-referenced data containers, and role-specific operational workflows.",
-    repo: "https://github.com/mol-sar"
+    desc: "A terminal-based management system written in C++. It manages pet reservations, room check-ins, and staff duties. The program uses object-oriented programming concepts like classes, inheritance, and pointers to keep the system organized and reliable.",
+    repo: "https://github.com/mol-sar/Pet-Hotel-System"
   }
 };
 
