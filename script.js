@@ -29,6 +29,12 @@ const projectsData = {
     tech: "C++, Abstract Base Classes, Virtual Functions, Pointers",
     desc: "A terminal-based management system written in C++. It manages pet reservations, room check-ins, and staff duties. The program uses object-oriented programming concepts like classes, inheritance, and pointers to keep the system organized and reliable.",
     repo: "https://github.com/mol-sar/Pet-Hotel-System"
+  },
+  6: {
+    title: "Java String Cipher & Encoder",
+    tech: "Java, Java Swing GUI, String Manipulation, Cipher Logic",
+    desc: "A collaborative Java desktop tool developed for an assignment. It validates user text and applies a custom shift cipher across lowercase letters and numbers while preserving spaces. I implemented the core validation and encoding logic in Encoded.java, handling character parsing and dynamic key generation.",
+    repo: "https://github.com/mol-sar/Encoded"
   }
 };
 
