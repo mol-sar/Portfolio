@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- Top Persistent Navbar -->
+  <!-- Top Navigation bar -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-logo">&nbspMD<span>.</span></a>
@@ -20,13 +20,13 @@
         <a href="#portfolio" class="nav-link">Portfolio</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#contact" class="nav-link">Contact</a>
-        <button id="theme-toggle" class="btn-theme" aria-label="Toggle light/dark theme">☀️</button>
+        <button id="theme-toggle" class="btn-theme" aria-label="Toggle light/dark theme">☀️</button> 
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- 1. Hero Section (Split Layout) -->
+    <!-- 1. Hero Section -->
     <section id="home" class="section hero">
       <div class="container hero-grid">
         <div class="hero-text">
@@ -51,43 +51,47 @@
       </div>
     </section>
 
-    <!-- 2. What I Do Section (3 Column Cards) -->
-    <section id="services" class="section">
-      <div class="container">
-        <div class="section-heading text-center">
-          <h2 class="section-title">What I Do</h2>
-          <div class="title-underline"></div>
-        </div>
-
-        <div class="services-grid">
+    <!-- 2. What I Do Section -->
+    <div class="services-grid">
           <div class="service-card">
-            <div class="service-media placeholder-media">
-              <span>Graphics & Simulation</span>
+            <div class="service-media">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
             </div>
             <h3>Computer Graphics & Engines</h3>
             <p>Developing low-level 2D graphics systems, rendering loops, and geometric transformations in C++ using legacy OpenGL primitives and GLUT.</p>
           </div>
 
           <div class="service-card">
-            <div class="service-media placeholder-media">
-              <span>Database Architecture</span>
+            <div class="service-media">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
             </div>
             <h3>Backend Database Systems</h3>
             <p>Architecting relational database management systems using MariaDB/MySQL with schemas normalized from 1NF to 3NF for transactional integrity.</p>
           </div>
 
           <div class="service-card">
-            <div class="service-media placeholder-media">
-              <span>Figma & Design Systems</span>
+            <div class="service-media">
+              <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
+              </svg>
             </div>
             <h3>UI/UX Interaction Design</h3>
             <p>Crafting high-fidelity interactive wireframes, clickable prototypes, and accessible digital design systems with clean touch-ergonomics.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- 3. About Me Section (Framed Layout) -->
+    
+    <!-- 3. About Me Section -->
     <section id="about" class="section section-alt">
       <div class="container about-grid">
         <div class="about-image-wrapper">
@@ -106,7 +110,7 @@
             I am a Computer Science undergraduate majoring in <strong>Multimedia Computing with Honours</strong> at Universiti Malaysia Sarawak (UNIMAS).
           </p>
           <p class="about-text">
-        I build custom 2D computer graphics pipelines, normalized relational database applications, and accessible UI/UX interaction systems.
+            I build custom 2D computer graphics pipelines, normalized relational database applications, and accessible UI/UX interaction systems.
           </p>
 
           <div class="checklist">
@@ -127,7 +131,7 @@
       </div>
     </section>
 
-    <!-- 4. Portfolio Section (2x2 Grid with Filter) -->
+    <!-- 4. Portfolio Section -->
     <section id="portfolio" class="section">
       <div class="container">
         <div class="section-heading text-center">
@@ -135,7 +139,7 @@
           <div class="title-underline"></div>
         </div>
 
-        <!-- Filter Controls -->
+        <!-- 4.1 Filters -->
         <div class="filter-controls">
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="cpp">C++ & Graphics</button>
@@ -145,7 +149,7 @@
         </div>
 
         <div class="portfolio-grid" id="portfolio-grid">
-          <!-- Project 1 -->
+          <!-- a. Project 1 -->
           <article class="portfolio-card" data-category="cpp" data-id="1">
             <div class="card-thumb">
               <img src="images/cave.jpeg" alt="EcoMiner 2D Screenshot" onerror="this.style.display='none'">
@@ -159,7 +163,7 @@
             </div>
           </article>
 
-          <!-- Project 2 -->
+          <!-- b. Project 2 -->
           <article class="portfolio-card" data-category="web" data-id="2">
             <div class="card-thumb">
               <img src="images/sha.png" alt="Sarawak Heritage Auction Screenshot" onerror="this.style.display='none'">
@@ -173,7 +177,7 @@
             </div>
           </article>
 
-          <!-- Project 3 -->
+          <!-- c. Project 3 -->
           <article class="portfolio-card" data-category="uiux" data-id="3">
             <div class="card-thumb">
               <img src="images/artfigma.jpeg" alt="ART Mobile Prototype" onerror="this.style.display='none'">
@@ -187,7 +191,7 @@
             </div>
           </article>
 
-          <!-- Project 4 -->
+          <!-- d. Project 4 -->
           <article class="portfolio-card" data-category="java" data-id="4">
             <div class="card-thumb">
               <img src="images/Java.jpeg" alt="SDG Driver Safety App" onerror="this.style.display='none'">
@@ -201,7 +205,7 @@
             </div>
           </article>
 
-          <!-- Project 5 -->
+          <!-- f. Project 5 -->
           <article class="portfolio-card" data-category="cpp" data-id="5">
             <div class="card-thumb">
               <img src="images/PET.jpeg" alt="Pet Hotel Terminal Preview" onerror="this.style.display='none'">
@@ -218,7 +222,7 @@
       </div>
     </section>
 
-    <!-- 5. Skills Section (Icon Cards / Carousel) -->
+    <!-- 5. Skills Section -->
     <section id="skills" class="section section-alt">
       <div class="container">
         <div class="section-heading text-center">
@@ -297,7 +301,7 @@
     </section>
   </main>
 
-  <!-- Two-Column Footer -->
+  <!-- 7. Footer -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
