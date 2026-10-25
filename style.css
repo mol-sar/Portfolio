@@ -1,11 +1,9 @@
 
-/* ============================================================
-   1. DESIGN SYSTEM & CSS VARIABLES (SLATE & PEBBLE PALETTE)
-   ============================================================ */
+/* 1. Design System & CSS Variables */
 :root {
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* font */
   
-  /* Slate Dark Canvas */
+  /* Slate Background Color */
   --bg-primary: #2d262b;       
   --bg-secondary: #362e33;     
   --bg-card: #3f363c;          
@@ -15,7 +13,7 @@
   --text-main: #fbf9f8;       
   --text-muted: #bab0af;       
 
-  /* Accent: Warm Amber / Pebble Sand */
+  /* Accent:Warm Amber / Pebble Sand */
   --accent: #e0a96d;
   --accent-hover: #f0bc84;
   --btn-text: #2b2428;
@@ -24,7 +22,7 @@
   --error: #d17570;
   --transition: all 0.25s ease;
 }
-
+/*light theme*/
 [data-theme="light"] {
   --bg-primary: #f8f6f5;       
   --bg-secondary: #eee9e5;    
@@ -43,14 +41,12 @@
 .card-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Prevents stretching and crops nicely to the container */
+  object-fit: cover; /* Prevent Images Stretch */
   display: block;
 }
 
 
-/* ============================================================
-   2. GLOBAL BASE STYLES
-   ============================================================ */
+/*2. Base Style */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -60,7 +56,7 @@
 html {
   font-family: var(--font-family);
   color: var(--text-main);
-  background: linear-gradient(165deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  background: linear-gradient(165deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); 
   background-attachment: fixed;
   min-height: 100vh;
 }
@@ -101,9 +97,7 @@ html {
   margin: 0.6rem auto 0 auto;
 }
 
-/* ============================================================
-   3. NAVIGATION BAR
-   ============================================================ */
+/* 3. Navigation Bar */
 .navbar {
   position: sticky;
   top: 0;
@@ -168,9 +162,7 @@ html {
 
 .menu-toggle { display: none; font-size: 1.2rem; }
 
-/* ============================================================
-   4. HERO SECTION (SPLIT WIREFRAME)
-   ============================================================ */
+/* 4. Hero Section  */
 .hero {
   min-height: 80vh;
   display: flex;
@@ -230,7 +222,7 @@ html {
   gap: 1rem;
 }
 
-/* Image Placeholders / Boxes */
+/* Image Placeholders */
 .image-box {
   background: var(--bg-placeholder);
   border: 1px solid var(--border-color);
@@ -264,9 +256,7 @@ html {
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
 }
 
-/* ============================================================
-   5. WHAT I DO SECTION (3-COLUMN CARDS)
-   ============================================================ */
+/*5. What I Do Section (Cards) */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -315,9 +305,7 @@ html {
   line-height: 1.6;
 }
 
-/* ============================================================
-   6. ABOUT ME (OFFSET FRAMED LAYOUT)
-   ============================================================ */
+/*  6. About Me Section  */
 .about-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -397,9 +385,7 @@ html {
   margin-top: 2px;
 }
 
-/* ============================================================
-   7. PORTFOLIO SHOWCASE
-   ============================================================ */
+/* 7. Projects List */
 .filter-controls {
   display: flex;
   justify-content: center;
@@ -526,9 +512,7 @@ html {
   color: var(--btn-text);
 }
 
-/* ============================================================
-   8. SKILLS SECTION (INTERACTIVE TRACK / CAROUSEL)
-   ============================================================ */
+/* 8. Skill Sections*/
 .skills-carousel-wrapper {
   position: relative;
   display: flex;
@@ -590,9 +574,7 @@ html {
   color: var(--accent);
 }
 
-/* ============================================================
-   9. PRE-FOOTER CALLOUT BANNER
-   ============================================================ */
+/* 9. Footer Banner */
 .cta-banner {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
@@ -616,9 +598,7 @@ html {
   gap: 1.2rem;
 }
 
-/* ============================================================
-   10. GENERAL BUTTONS
-   ============================================================ */
+/* 10. Buttons */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.6rem;
@@ -657,9 +637,7 @@ html {
 
 .btn-block { width: 100%; }
 
-/* ============================================================
-   11. CONTACT FORM
-   ============================================================ */
+/* 11. Contact Me Section */
 .contact-wrapper { max-width: 580px; margin: 0 auto; }
 .form-group { margin-bottom: 1.4rem; }
 .form-group label { display: block; margin-bottom: 0.4rem; font-size: 0.88rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); }
@@ -679,9 +657,7 @@ html {
 .error-msg { color: var(--error); font-size: 0.8rem; display: block; margin-top: 0.3rem; }
 .form-feedback { margin-top: 1rem; font-weight: 600; font-size: 0.95rem; text-align: center; }
 
-/* ============================================================
-   12. TWO-COLUMN FOOTER
-   ============================================================ */
+/*  12. Two Column Footer */
 .footer {
   background: var(--bg-primary);
   border-top: 1px solid var(--border-color);
@@ -764,9 +740,7 @@ html {
 }
 .scroll-top-btn.visible { display: flex; }
 
-/* ============================================================
-   13. RESPONSIVE MEDIA QUERIES
-   ============================================================ */
+/* 13. Responsive Media */
 @media (max-width: 850px) {
   .hero-grid, .about-grid, .footer-grid {
     grid-template-columns: 1fr;
