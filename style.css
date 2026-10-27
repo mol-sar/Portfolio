@@ -1,9 +1,11 @@
 
-/* 1. Design System & CSS Variables */
+/* ============================================================
+   1. DESIGN SYSTEM & CSS VARIABLES (SLATE & PEBBLE PALETTE)
+   ============================================================ */
 :root {
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* font */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   
-  /* Slate Background Color */
+  /* Slate Dark Canvas */
   --bg-primary: #2d262b;       
   --bg-secondary: #362e33;     
   --bg-card: #3f363c;          
@@ -13,7 +15,7 @@
   --text-main: #fbf9f8;       
   --text-muted: #bab0af;       
 
-  /* Accent:Warm Amber / Pebble Sand */
+  /* Accent: Warm Amber / Pebble Sand */
   --accent: #e0a96d;
   --accent-hover: #f0bc84;
   --btn-text: #2b2428;
@@ -22,7 +24,7 @@
   --error: #d17570;
   --transition: all 0.25s ease;
 }
-/*light theme*/
+
 [data-theme="light"] {
   --bg-primary: #f8f6f5;       
   --bg-secondary: #eee9e5;    
@@ -41,12 +43,13 @@
 .card-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover; /* Prevents stretching and crops nicely to the container */
   display: block;
 }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/*2. Base Style */
+/* ============================================================
+   2. GLOBAL BASE STYLES
+   ============================================================ */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -56,7 +59,7 @@
 html {
   font-family: var(--font-family);
   color: var(--text-main);
-  background: linear-gradient(165deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); 
+  background: linear-gradient(165deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   background-attachment: fixed;
   min-height: 100vh;
 }
@@ -97,8 +100,9 @@ html {
   margin: 0.6rem auto 0 auto;
 }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/* 3. Navigation Bar */
+/* ============================================================
+   3. NAVIGATION BAR
+   ============================================================ */
 .navbar {
   position: sticky;
   top: 0;
@@ -161,10 +165,11 @@ html {
   cursor: pointer;
 }
 
-.menu-toggle { display: none; font-size: 1.2rem;}
+.menu-toggle { display: none; font-size: 1.2rem; }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/* 4. Hero Section  */
+/* ============================================================
+   4. HERO SECTION (SPLIT WIREFRAME)
+   ============================================================ */
 .hero {
   min-height: 80vh;
   display: flex;
@@ -224,7 +229,7 @@ html {
   gap: 1rem;
 }
 
-/* Image Placeholders */
+/* Image Placeholders / Boxes */
 .image-box {
   background: var(--bg-placeholder);
   border: 1px solid var(--border-color);
@@ -255,42 +260,12 @@ html {
 .profile-box {
   width: 100%;
   aspect-ratio: 4 / 5;
-  border-radius: 200px 200px 20px 20px;
-  overflow: hidden;      
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
 }
-/* Live Status Pill */
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(125, 168, 123, 0.12);
-  border: 1px solid rgba(125, 168, 123, 0.4);
-  color: var(--success);
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 0.3rem 0.8rem;
-  border-radius: 9999px;
-  margin-bottom: 0.8rem;
-  letter-spacing: 0.3px;
-}
 
-.status-dot {
-  width: 7px;
-  height: 7px;
-  background-color: var(--success);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--success);
-  animation: pulse 2s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
-}
-
-/*---------------------------------------------------------------------------------------------------------------------------
-/*5. What I Do Section (Cards) */
+/* ============================================================
+   5. WHAT I DO SECTION (3-COLUMN CARDS)
+   ============================================================ */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -339,7 +314,9 @@ html {
   line-height: 1.6;
 }
 
-/*  6. About Me Section  */
+/* ============================================================
+   6. ABOUT ME (OFFSET FRAMED LAYOUT)
+   ============================================================ */
 .about-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -419,8 +396,9 @@ html {
   margin-top: 2px;
 }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/* 7. Projects List */
+/* ============================================================
+   7. PORTFOLIO SHOWCASE
+   ============================================================ */
 .filter-controls {
   display: flex;
   justify-content: center;
@@ -547,8 +525,9 @@ html {
   color: var(--btn-text);
 }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/* 8. Skill Sections*/
+/* ============================================================
+   8. SKILLS SECTION (INTERACTIVE TRACK / CAROUSEL)
+   ============================================================ */
 .skills-carousel-wrapper {
   position: relative;
   display: flex;
@@ -610,8 +589,9 @@ html {
   color: var(--accent);
 }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/* 9. Footer Banner */
+/* ============================================================
+   9. PRE-FOOTER CALLOUT BANNER
+   ============================================================ */
 .cta-banner {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
@@ -635,8 +615,9 @@ html {
   gap: 1.2rem;
 }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/* 10. Buttons */
+/* ============================================================
+   10. GENERAL BUTTONS
+   ============================================================ */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.6rem;
@@ -675,8 +656,9 @@ html {
 
 .btn-block { width: 100%; }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/* 11. Contact Me Section */
+/* ============================================================
+   11. CONTACT FORM
+   ============================================================ */
 .contact-wrapper { max-width: 580px; margin: 0 auto; }
 .form-group { margin-bottom: 1.4rem; }
 .form-group label { display: block; margin-bottom: 0.4rem; font-size: 0.88rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); }
@@ -696,8 +678,9 @@ html {
 .error-msg { color: var(--error); font-size: 0.8rem; display: block; margin-top: 0.3rem; }
 .form-feedback { margin-top: 1rem; font-weight: 600; font-size: 0.95rem; text-align: center; }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/*  12. Two Column Footer */
+/* ============================================================
+   12. TWO-COLUMN FOOTER
+   ============================================================ */
 .footer {
   background: var(--bg-primary);
   border-top: 1px solid var(--border-color);
@@ -743,8 +726,7 @@ html {
 }
 .contact-list a:hover { text-decoration: underline; }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/* 13.  Modal & Scroll to Top */
+/* Modal & Scroll to Top */
 .modal { display: none; position: fixed; inset: 0; z-index: 200; justify-content: center; align-items: center; }
 .modal.open { display: flex; }
 .modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.65); }
@@ -758,34 +740,10 @@ html {
   width: 90%;
   z-index: 10;
 }
-.modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1.2rem;
-  background: transparent;
-  border: none;
-  font-size: 1.8rem;
-  line-height: 1;
-  color: var(--text-muted);
-  cursor: pointer;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  transition: var(--transition);
-}
+.modal-close { position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer; }
+.modal-category { color: var(--accent); font-size: 0.88rem; font-weight: 600; margin-bottom: 1rem; }
+.modal-links { margin-top: 1.5rem; }
 
-.modal-close:hover {
-  color: var(--accent);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.modal-category {
-  color: var(--accent);
-  font-size: 0.88rem;
-  font-weight: 700;
-  margin: 0.4rem 0 1rem 0;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
 .scroll-top-btn {
   position: fixed;
   bottom: 2rem;
@@ -803,59 +761,22 @@ html {
   justify-content: center;
   transition: var(--transition);
 }
-.scroll-top-btn.visible { display: flex; 
+.scroll-top-btn.visible { display: flex; }
 
-/*---------------------------------------------------------------------------------------------------------------------------
-/* 14. Responsive Media */
+/* ============================================================
+   13. RESPONSIVE MEDIA QUERIES
+   ============================================================ */
 @media (max-width: 850px) {
-  .hero {
-    min-height: auto;
-    padding: 3rem 0;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    text-align: center;
-  }
-
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-title {
-    font-size: 2.4rem;
-    word-break: break-word;
-  }
-
-  .hero-actions {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .profile-box {
-    max-width: 260px;
-    margin: 0 auto;
-  }
-
-  .about-grid, 
-  .footer-grid {
+  .hero-grid, .about-grid, .footer-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-
-  .offset-frame::before { 
-    display: none; 
-  }
+  .offset-frame::before { display: none; }
+  .profile-box { max-width: 320px; margin: 0 auto; }
 }
 
 @media (max-width: 768px) {
-  .menu-toggle { /*hamburger menu*/
-    display: block !important; 
-  }
-
+  .menu-toggle { display: block; }
   .nav-links {
     display: none;
     position: absolute;
@@ -865,16 +786,8 @@ html {
     background: var(--bg-primary);
     flex-direction: column;
     padding: 1.5rem 0;
-    gap: 1.2rem;
     border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   }
-
-  .nav-links.open { 
-    display: flex !important; 
-  }
-
-  .hero-title { 
-    font-size: 2.1rem; 
-  }
+  .nav-links.open { display: flex; }
+  .hero-title { font-size: 2.3rem; }
 }
