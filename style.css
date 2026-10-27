@@ -44,43 +44,8 @@
   object-fit: cover; /* Prevent Images Stretch */
   display: block;
 }
-/* ============================================================
-   INTERACTIVE 3D PERSPECTIVE CONTAINERS
-   ============================================================ */
-.hero-image-wrapper,
-.about-image-wrapper {
-  perspective: 1000px; /* Activates 3D spatial field */
-}
 
-.tilt-element {
-  transform-style: preserve-3d;
-  transition: transform 0.15s ease-out, box-shadow 0.2s ease;
-  will-change: transform;
-}
-
-/* Give internal layers real pop-out depth */
-.tilt-element img {
-  transform: translateZ(30px); /* Lifts image off the backplane */
-  border-radius: 8px;
-}
-
-.tilt-element .box-placeholder {
-  transform: translateZ(20px);
-}
-
-/* Subtle Dynamic Glare Overlay */
-.glare-overlay {
-  position: absolute;
-  inset: 0;
-  border-radius: 8px;
-  pointer-events: none;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
-  opacity: 0;
-  transform: translateZ(40px);
-  transition: opacity 0.2s ease;
-  z-index: 10;
-}
-
+/*---------------------------------------------------------------------------------------------------------------------------
 /*2. Base Style */
 * {
   box-sizing: border-box;
@@ -132,6 +97,7 @@ html {
   margin: 0.6rem auto 0 auto;
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------
 /* 3. Navigation Bar */
 .navbar {
   position: sticky;
@@ -195,8 +161,9 @@ html {
   cursor: pointer;
 }
 
-.menu-toggle { display: none; font-size: 1.2rem; }
+.menu-toggle { display: none; font-size: 1.2rem;}
 
+/*---------------------------------------------------------------------------------------------------------------------------
 /* 4. Hero Section  */
 .hero {
   min-height: 80vh;
@@ -320,19 +287,7 @@ html {
   50% { opacity: 0.4; transform: scale(0.85); }
 }
 
-/* Typing Cursor */
-.cursor {
-  display: inline-block;
-  background-color: var(--accent);
-  width: 2px;
-  margin-left: 2px;
-  animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
+/*---------------------------------------------------------------------------------------------------------------------------
 /*5. What I Do Section (Cards) */
 .services-grid {
   display: grid;
@@ -462,6 +417,7 @@ html {
   margin-top: 2px;
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------
 /* 7. Projects List */
 .filter-controls {
   display: flex;
@@ -589,6 +545,7 @@ html {
   color: var(--btn-text);
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------
 /* 8. Skill Sections*/
 .skills-carousel-wrapper {
   position: relative;
@@ -651,6 +608,7 @@ html {
   color: var(--accent);
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------
 /* 9. Footer Banner */
 .cta-banner {
   background: var(--bg-secondary);
@@ -675,6 +633,7 @@ html {
   gap: 1.2rem;
 }
 
+/*---------------------------------------------------------------------------------------------------------------------------
 /* 10. Buttons */
 .btn {
   display: inline-block;
@@ -714,6 +673,7 @@ html {
 
 .btn-block { width: 100%; }
 
+/*---------------------------------------------------------------------------------------------------------------------------
 /* 11. Contact Me Section */
 .contact-wrapper { max-width: 580px; margin: 0 auto; }
 .form-group { margin-bottom: 1.4rem; }
@@ -734,6 +694,7 @@ html {
 .error-msg { color: var(--error); font-size: 0.8rem; display: block; margin-top: 0.3rem; }
 .form-feedback { margin-top: 1rem; font-weight: 600; font-size: 0.95rem; text-align: center; }
 
+/*---------------------------------------------------------------------------------------------------------------------------
 /*  12. Two Column Footer */
 .footer {
   background: var(--bg-primary);
@@ -780,7 +741,8 @@ html {
 }
 .contact-list a:hover { text-decoration: underline; }
 
-/* Modal & Scroll to Top */
+/*---------------------------------------------------------------------------------------------------------------------------
+/* 13.  Modal & Scroll to Top */
 .modal { display: none; position: fixed; inset: 0; z-index: 200; justify-content: center; align-items: center; }
 .modal.open { display: flex; }
 .modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.65); }
@@ -817,7 +779,7 @@ html {
 }
 .scroll-top-btn.visible { display: flex; }
 
-/* 13. Responsive Media */
+/* 14. Responsive Media */
 @media (max-width: 850px) {
   .hero-grid, .about-grid, .footer-grid {
     grid-template-columns: 1fr;
