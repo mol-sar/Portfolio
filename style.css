@@ -1,7 +1,6 @@
 
-/* ============================================================
-   1. DESIGN SYSTEM & CSS VARIABLES (SLATE & PEBBLE PALETTE)
-   ============================================================ */
+ /*  1. DESIGN SYSTEM & CSS VARIABLES */
+ 
 :root {
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   
@@ -47,9 +46,7 @@
   display: block;
 }
 
-/* ============================================================
-   2. GLOBAL BASE STYLES
-   ============================================================ */
+/*  2. BASE STYLE */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -100,9 +97,7 @@ html {
   margin: 0.6rem auto 0 auto;
 }
 
-/* ============================================================
-   3. NAVIGATION BAR
-   ============================================================ */
+/*  3. NAVIGATION */
 .navbar {
   position: sticky;
   top: 0;
@@ -167,9 +162,7 @@ html {
 
 .menu-toggle { display: none; font-size: 1.2rem; }
 
-/* ============================================================
-   4. HERO SECTION (SPLIT WIREFRAME)
-   ============================================================ */
+/*  4. HERO SECTION */
 .hero {
   min-height: 80vh;
   display: flex;
@@ -229,7 +222,6 @@ html {
   gap: 1rem;
 }
 
-/* Image Placeholders / Boxes */
 .image-box {
   background: var(--bg-placeholder);
   border: 1px solid var(--border-color);
@@ -263,9 +255,7 @@ html {
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
 }
 
-/* ============================================================
-   5. WHAT I DO SECTION (3-COLUMN CARDS)
-   ============================================================ */
+/* 5. WHA I DO? SECTION */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -314,9 +304,7 @@ html {
   line-height: 1.6;
 }
 
-/* ============================================================
-   6. ABOUT ME (OFFSET FRAMED LAYOUT)
-   ============================================================ */
+/* 6. ABOUT ME SECTION */
 .about-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -396,9 +384,7 @@ html {
   margin-top: 2px;
 }
 
-/* ============================================================
-   7. PORTFOLIO SHOWCASE
-   ============================================================ */
+/*  7. PORTFOLIO*/
 .filter-controls {
   display: flex;
   justify-content: center;
@@ -525,9 +511,7 @@ html {
   color: var(--btn-text);
 }
 
-/* ============================================================
-   8. SKILLS SECTION (INTERACTIVE TRACK / CAROUSEL)
-   ============================================================ */
+/* 8. SKILLS INFO SECTION */
 .skills-carousel-wrapper {
   position: relative;
   display: flex;
@@ -589,9 +573,7 @@ html {
   color: var(--accent);
 }
 
-/* ============================================================
-   9. PRE-FOOTER CALLOUT BANNER
-   ============================================================ */
+/* 9. FOOTER */
 .cta-banner {
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
@@ -615,9 +597,7 @@ html {
   gap: 1.2rem;
 }
 
-/* ============================================================
-   10. GENERAL BUTTONS
-   ============================================================ */
+/* 10. GENERAL BUTTONS */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.6rem;
@@ -656,9 +636,7 @@ html {
 
 .btn-block { width: 100%; }
 
-/* ============================================================
-   11. CONTACT FORM
-   ============================================================ */
+/*  11.CONTACT FORM */
 .contact-wrapper { max-width: 580px; margin: 0 auto; }
 .form-group { margin-bottom: 1.4rem; }
 .form-group label { display: block; margin-bottom: 0.4rem; font-size: 0.88rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); }
@@ -678,9 +656,7 @@ html {
 .error-msg { color: var(--error); font-size: 0.8rem; display: block; margin-top: 0.3rem; }
 .form-feedback { margin-top: 1rem; font-weight: 600; font-size: 0.95rem; text-align: center; }
 
-/* ============================================================
-   12. TWO-COLUMN FOOTER
-   ============================================================ */
+/*  12. TWO-COLUMN FOOTER */
 .footer {
   background: var(--bg-primary);
   border-top: 1px solid var(--border-color);
@@ -726,7 +702,7 @@ html {
 }
 .contact-list a:hover { text-decoration: underline; }
 
-/* Modal & Scroll to Top */
+/* 13. MODAL AND SCROLL */
 .modal { display: none; position: fixed; inset: 0; z-index: 200; justify-content: center; align-items: center; }
 .modal.open { display: flex; }
 .modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.65); }
@@ -763,9 +739,7 @@ html {
 }
 .scroll-top-btn.visible { display: flex; }
 
-/* ============================================================
-   13. RESPONSIVE MEDIA QUERIES
-   ============================================================ */
+/* 14.RESPONSIVE MEDIA QUERIES */
 @media (max-width: 850px) {
   .hero-grid, .about-grid, .footer-grid {
     grid-template-columns: 1fr;
