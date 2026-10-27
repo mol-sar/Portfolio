@@ -255,6 +255,48 @@ html {
   aspect-ratio: 4 / 5;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
 }
+/* Live Status Pill */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(125, 168, 123, 0.12);
+  border: 1px solid rgba(125, 168, 123, 0.4);
+  color: var(--success);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.3px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--success);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--success);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* Typing Cursor */
+.cursor {
+  display: inline-block;
+  background-color: var(--accent);
+  width: 2px;
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
 
 /*5. What I Do Section (Cards) */
 .services-grid {
