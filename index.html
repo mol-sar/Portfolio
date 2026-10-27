@@ -44,14 +44,47 @@
     </div>
 
     <div class="hero-image-wrapper">
-      <div class="image-box profile-box tilt-element" id="profile-pic-container">
-        <img src="images/Hero.jpeg" alt="Melkha Dunian Portrait" onerror="this.style.display='none'">
-        <div class="box-placeholder">Photo Placeholder</div>
-        <div class="glare-overlay"></div>
+  <div class="crop-editor-container tilt-element" id="profile-pic-container">
+    <!-- The Full Photo -->
+    <img src="images/Hero.jpeg" alt="Melkha Dunian Portrait" class="editor-bg-image" onerror="this.style.display='none'">
+    
+    <!-- Dim Backdrop Overlay (dims the outside of the focus area) -->
+    <div class="editor-darken-layer"></div>
+
+    <!-- The Active Crop Box Focus -->
+    <div class="crop-focus-frame">
+      <!-- 4 Corner Brackets -->
+      <span class="corner corner-tl"></span>
+      <span class="corner corner-tr"></span>
+      <span class="corner corner-bl"></span>
+      <span class="corner corner-br"></span>
+
+      <!-- 4 Edge Grab Handles -->
+      <span class="handle handle-t"></span>
+      <span class="handle handle-b"></span>
+      <span class="handle handle-l"></span>
+      <span class="handle handle-r"></span>
+
+      <!-- Resolution / Aspect Pill -->
+      <div class="crop-spec-badge">
+        <span class="crop-dim">1355 &times; 1444</span>
+      </div>
+
+      <!-- Subtle Grid Rule of Thirds Lines -->
+      <div class="rule-of-thirds">
+        <span class="rot-h"></span>
+        <span class="rot-v"></span>
       </div>
     </div>
+
+    <!-- Bottom Dial / Angle Indicator (Optional subtle editor touch) -->
+    <div class="crop-status-bar">
+      <span>0.0&deg;</span>
+    </div>
+
+    <div class="glare-overlay"></div>
   </div>
-</section>
+</div>
 
     <!-- 3. What I Do Section -->
     <section id="services" class="section">
