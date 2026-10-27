@@ -118,22 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   //---------------------------------------------------------------------------------------------------------------------------
   // 8. Project Category Filter
-  const filterBtns = document.querySelectorAll(".filter-btn");
+const filterBtns = document.querySelectorAll(".filter-btn");
   const portfolioCards = document.querySelectorAll(".portfolio-card");
-
-  // Calculate and append counts automatically
-  filterBtns.forEach(btn => {
-    const filter = btn.getAttribute("data-filter");
-    let count = 0;
-    if (filter === "all") {
-      count = portfolioCards.length;
-    } else {
-      portfolioCards.forEach(c => {
-        if (c.getAttribute("data-category") === filter) count++;
-      });
-    }
-    btn.innerHTML = `${btn.textContent} <span class="filter-count">${count}</span>`;
-  });
 
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
