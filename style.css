@@ -50,10 +50,12 @@
   height: 100%;
   object-fit: cover; 
   display: block;
+ overflow: hidden;
+ border-radius: inherit;
 }
 
 /*  2. BASE STYLE */
-* {
+ * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
