@@ -284,3 +284,38 @@ document.addEventListener("DOMContentLoaded", () => {
   typeEffect();
   });
 });
+
+// Native Vanilla 3D Mouse Tilt Effect
+  const tiltCards = document.querySelectorAll(".tilt-element");
+
+  tiltCards.forEach((card) => {
+    const glare = card.querySelector(".glare-overlay");
+
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left; // Mouse X relative to card
+      const y = e.clientY - rect.top;  // Mouse Y relative to card
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      // Max tilt angle (degrees)
+      const maxTilt = 14;
+      const rotateX = ((y - centerY) / centerY) * -maxTilt;
+      const rotateY = ((x - centerX) / centerX) * maxTilt;
+
+      card.style.transform = `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.03, 1.03, 1.03)`;
+
+      if (glare) {
+        const glareX = (x / rect.width) * 100;
+        const glareY = (y / rect.height) * 100;
+        glare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(224, 169, 109, 0.3) 0%, rgba(255, 255, 255, 0) 70%)`;
+        glare.style.opacity = "1";
+      }
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+      if (glare) glare.style.opacity = "0";
+    });
+  });
