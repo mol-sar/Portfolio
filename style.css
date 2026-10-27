@@ -745,54 +745,42 @@ html {
 
 /*---------------------------------------------------------------------------------------------------------------------------
 /* 13.  Modal & Scroll to Top */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-}
-
-.modal.open {
-  display: flex !important;
-}
-
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(4px);
-  z-index: 10000;
-}
-
+/* Modal & Scroll to Top */
+.modal { display: none; position: fixed; inset: 0; z-index: 200; justify-content: center; align-items: center; }
+.modal.open { display: flex; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.65); }
 .modal-content {
   position: relative;
-  background: var(--bg-card, #1e1b1e);
-  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   padding: 2.2rem;
-  border-radius: 12px;
-  max-width: 540px;
-  width: 100%;
-  z-index: 10001; /* Must sit ABOVE the backdrop */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  max-width: 520px;
+  width: 90%;
+  z-index: 10;
 }
+.modal-close { position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer; }
+.modal-category { color: var(--accent); font-size: 0.88rem; font-weight: 600; margin-bottom: 1rem; }
+.modal-links { margin-top: 1.5rem; }
 
-.modal-links {
-  margin-top: 1.5rem;
-}
-
-.modal-links a {
-  display: inline-block;
-  padding: 0.7rem 1.4rem;
-  background: var(--accent, #e0a96d);
-  color: var(--btn-text, #1c1917);
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--accent);
+  color: var(--btn-text);
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.2rem;
   cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
 }
+.scroll-top-btn.visible { display: flex; }
 
 .scroll-top-btn {
   position: fixed;
