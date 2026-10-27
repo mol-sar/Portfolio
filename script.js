@@ -39,10 +39,12 @@ const projectsData = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+
   // 1. Dynamic Footer Year
   const yearEl = document.getElementById("current-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-
+   
+  //---------------------------------------------------------------------------------------------------------------------------
   // 2. Dark / Light Theme Toggle with LocalStorage
   const themeToggle = document.getElementById("theme-toggle");
   const currentTheme = localStorage.getItem("site-theme") || "dark";
@@ -56,7 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("site-theme", nextTheme);
     themeToggle.textContent = nextTheme === "dark" ? "☀️" : "🌙";
   });
-
+  
+  //---------------------------------------------------------------------------------------------------------------------------
   // 3. Mobile Hamburger Menu Toggle
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
@@ -64,14 +67,16 @@ document.addEventListener("DOMContentLoaded", () => {
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("open");
   });
-
+  
+  //---------------------------------------------------------------------------------------------------------------------------
   // 4. Close Mobile Menu on Nav Click
   document.querySelectorAll(".nav-link").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("open");
     });
   });
-
+  
+  //---------------------------------------------------------------------------------------------------------------------------
   // 5. Sticky Navbar Shadow & Scroll-to-Top Button
   const navbar = document.getElementById("navbar");
   const scrollTopBtn = document.getElementById("scroll-top-btn");
@@ -89,12 +94,14 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTopBtn.classList.remove("visible");
     }
   });
-
+  
+  //---------------------------------------------------------------------------------------------------------------------------
   // 6. Scroll to Top Action
   scrollTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
+  //---------------------------------------------------------------------------------------------------------------------------
   // 7. Active Nav Link via IntersectionObserver
   const sections = document.querySelectorAll("section[id]");
   const observer = new IntersectionObserver((entries) => {
@@ -108,7 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { threshold: 0.3 });
   sections.forEach(sec => observer.observe(sec));
-
+  
+  //---------------------------------------------------------------------------------------------------------------------------
   // 8. Project Category Filter
   const filterBtns = document.querySelectorAll(".filter-btn");
   const portfolioCards = document.querySelectorAll(".portfolio-card");
@@ -144,6 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+  //---------------------------------------------------------------------------------------------------------------------------
   // 9. Interactive Modal Dialog
   const modal = document.getElementById("project-modal");
   const modalTitle = document.getElementById("modal-title");
@@ -180,7 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
   });
-
+  
+  //---------------------------------------------------------------------------------------------------------------------------
   // 10. Skills Carousel Navigation Buttons
   const skillsTrack = document.getElementById("skills-track");
   const skillPrev = document.getElementById("skill-prev");
@@ -195,6 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  //---------------------------------------------------------------------------------------------------------------------------
   // 11. Contact Form Character Counter & Validation
   const messageInput = document.getElementById("message");
   const charCount = document.getElementById("char-count");
@@ -241,81 +252,5 @@ document.addEventListener("DOMContentLoaded", () => {
       feedback.textContent = "Thank you! Your message has been sent successfully.";
       contactForm.reset();
       charCount.textContent = "0";
-  
   });
 });
-    // 12. Dynamic Typewriter Effect for Hero
-  const roles = [
-    "Multimedia Computing Student",
-    "C++ & OpenGL Engine Developer",
-    "UI/UX Interaction Designer",
-    "Relational Database Architect"
-  ];
-  let roleIdx = 0;
-  let charIdx = 0;
-  let isDeleting = false;
-  const typeTarget = document.getElementById("typewriter-text");
-
-  function typeEffect() {
-    if (!typeTarget) return;
-    const currentWord = roles[roleIdx];
-    
-    if (isDeleting) {
-      typeTarget.textContent = currentWord.substring(0, charIdx - 1);
-      charIdx--;
-    } else {
-      typeTarget.textContent = currentWord.substring(0, charIdx + 1);
-      charIdx++;
-    }
-
-    let speed = isDeleting ? 40 : 90;
-
-    if (!isDeleting && charIdx === currentWord.length) {
-      speed = 1800;
-      isDeleting = true;
-    } else if (isDeleting && charIdx === 0) {
-      isDeleting = false;
-      roleIdx = (roleIdx + 1) % roles.length;
-      speed = 400; 
-    }
-
-    setTimeout(typeEffect, speed);
-  }
-  typeEffect();
-  });
-});
-
-// Native Vanilla 3D Mouse Tilt Effect
-  const tiltCards = document.querySelectorAll(".tilt-element");
-
-  tiltCards.forEach((card) => {
-    const glare = card.querySelector(".glare-overlay");
-
-    card.addEventListener("mousemove", (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left; // Mouse X relative to card
-      const y = e.clientY - rect.top;  // Mouse Y relative to card
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      // Max tilt angle (degrees)
-      const maxTilt = 14;
-      const rotateX = ((y - centerY) / centerY) * -maxTilt;
-      const rotateY = ((x - centerX) / centerX) * maxTilt;
-
-      card.style.transform = `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.03, 1.03, 1.03)`;
-
-      if (glare) {
-        const glareX = (x / rect.width) * 100;
-        const glareY = (y / rect.height) * 100;
-        glare.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(224, 169, 109, 0.3) 0%, rgba(255, 255, 255, 0) 70%)`;
-        glare.style.opacity = "1";
-      }
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
-      if (glare) glare.style.opacity = "0";
-    });
-  });
