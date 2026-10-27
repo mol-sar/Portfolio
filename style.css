@@ -273,7 +273,7 @@ html {
 .service-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   padding: 1.8rem;
   text-align: center;
   transition: var(--transition);
@@ -332,11 +332,12 @@ html {
   width: 100%;
   height: 100%;
   border: 2px solid var(--accent);
-  border-radius: var(--radius-md);
+  border-radius: calc(var(--radius-lg) + 4px);
   z-index: 1;
 }
 
 .offset-frame .image-box {
+  border-radius: var(--radius-lg);
   position: relative;
   z-index: 2;
   aspect-ratio: 1 / 1;
@@ -406,7 +407,7 @@ html {
   color: var(--text-muted);
   border: 1px solid var(--border-color);
   padding: 0.5rem 1.2rem;
-  border-radius: 9999px;
+  border-radius: var(--radius-md);
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
@@ -429,7 +430,7 @@ html {
 .portfolio-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-lg); 
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -450,12 +451,16 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
   border-bottom: 1px solid var(--border-color);
 }
 
 .card-thumb img {
   width: 100%;
   height: 100%;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
   object-fit: cover;
   position: absolute;
   inset: 0;
@@ -506,7 +511,7 @@ html {
   padding: 0.55rem 1.2rem;
   font-size: 0.85rem;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: var(--radius-md);
   background: transparent;
   color: var(--accent);
   border: 1px solid var(--accent);
@@ -533,9 +538,9 @@ html {
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 1rem 0;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; 
 }
-.skills-track::-webkit-scrollbar { display: none; } /* Chrome */
+.skills-track::-webkit-scrollbar { display: none; } 
 
 .skill-tile {
   min-width: 210px;
@@ -609,7 +614,7 @@ html {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.6rem;
-  border-radius: 4px;
+  border-radius: var(--radius-md);
   font-size: 0.88rem;
   text-decoration: none;
   font-weight: 700;
@@ -653,7 +658,7 @@ html {
   padding: 0.85rem;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 4px;
+  border-radius: var(--radius-md);
   color: var(--text-main);
   font-family: inherit;
 }
