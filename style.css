@@ -745,74 +745,55 @@ html {
 
 /*---------------------------------------------------------------------------------------------------------------------------
 /* 13.  Modal & Scroll to Top */
-/* Modal Component */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
-  z-index: 999;
-  justify-content: center;
+  z-index: 9999;
   align-items: center;
-  padding: 1rem;
+  justify-content: center;
+  padding: 1.5rem;
 }
 
 .modal.open {
-  display: flex;
+  display: flex !important;
 }
 
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(4px);
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .modal-content {
   position: relative;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: var(--bg-card, #1e1b1e);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
   padding: 2.2rem;
   border-radius: 12px;
   max-width: 540px;
   width: 100%;
-  z-index: 1001; /* Must sit above backdrop */
+  z-index: 10001; /* Must sit ABOVE the backdrop */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
-.modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1.2rem;
-  background: transparent;
-  border: none;
-  font-size: 1.8rem;
-  color: var(--text-muted);
-  cursor: pointer;
-  line-height: 1;
-}
-
-.modal-close:hover {
-  color: var(--accent);
-}
-
-.modal-category {
-  color: var(--accent);
-  font-size: 0.88rem;
-  font-weight: 700;
-  margin: 0.4rem 0 1rem 0;
-  text-transform: uppercase;
-}
-
-.modal-content p {
-  color: var(--text-muted);
-  line-height: 1.65;
-  font-size: 0.95rem;
-}
-
 .modal-links {
-  margin-top: 1.6rem;
+  margin-top: 1.5rem;
 }
+
+.modal-links a {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: var(--accent, #e0a96d);
+  color: var(--btn-text, #1c1917);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .scroll-top-btn {
   position: fixed;
   bottom: 2rem;
