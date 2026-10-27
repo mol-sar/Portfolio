@@ -228,5 +228,43 @@ document.addEventListener("DOMContentLoaded", () => {
       contactForm.reset();
       charCount.textContent = "0";
     }
+    // 12. Dynamic Typewriter Effect for Hero
+  const roles = [
+    "Multimedia Computing Student",
+    "C++ & OpenGL Engine Developer",
+    "UI/UX Interaction Designer",
+    "Relational Database Architect"
+  ];
+  let roleIdx = 0;
+  let charIdx = 0;
+  let isDeleting = false;
+  const typeTarget = document.getElementById("typewriter-text");
+
+  function typeEffect() {
+    if (!typeTarget) return;
+    const currentWord = roles[roleIdx];
+    
+    if (isDeleting) {
+      typeTarget.textContent = currentWord.substring(0, charIdx - 1);
+      charIdx--;
+    } else {
+      typeTarget.textContent = currentWord.substring(0, charIdx + 1);
+      charIdx++;
+    }
+
+    let speed = isDeleting ? 40 : 90;
+
+    if (!isDeleting && charIdx === currentWord.length) {
+      speed = 1800;
+      isDeleting = true;
+    } else if (isDeleting && charIdx === 0) {
+      isDeleting = false;
+      roleIdx = (roleIdx + 1) % roles.length;
+      speed = 400; 
+    }
+
+    setTimeout(typeEffect, speed);
+  }
+  typeEffect();
   });
 });
