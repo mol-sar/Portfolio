@@ -44,7 +44,42 @@
   object-fit: cover; /* Prevent Images Stretch */
   display: block;
 }
+/* ============================================================
+   INTERACTIVE 3D PERSPECTIVE CONTAINERS
+   ============================================================ */
+.hero-image-wrapper,
+.about-image-wrapper {
+  perspective: 1000px; /* Activates 3D spatial field */
+}
 
+.tilt-element {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+/* Give internal layers real pop-out depth */
+.tilt-element img {
+  transform: translateZ(30px); /* Lifts image off the backplane */
+  border-radius: 8px;
+}
+
+.tilt-element .box-placeholder {
+  transform: translateZ(20px);
+}
+
+/* Subtle Dynamic Glare Overlay */
+.glare-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0;
+  transform: translateZ(40px);
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
 
 /*2. Base Style */
 * {
