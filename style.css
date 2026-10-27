@@ -50,8 +50,8 @@
   height: 100%;
   object-fit: cover; 
   display: block;
- overflow: hidden;
- border-radius: inherit;
+  overflow: hidden;
+  border-radius: inherit;
 }
 
 /*  2. BASE STYLE */
@@ -233,7 +233,7 @@ html {
 .image-box {
   background: var(--bg-placeholder);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -274,7 +274,7 @@ html {
   border-radius: inherit;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: 1.8rem;
   text-align: center;
   transition: var(--transition);
@@ -497,7 +497,7 @@ html {
   padding: 0.55rem 1.2rem;
   font-size: 0.85rem;
   font-weight: 600;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   background: transparent;
   color: var(--accent);
   border: 1px solid var(--accent);
@@ -600,7 +600,7 @@ html {
 .btn {
   display: inline-block;
   padding: 0.75rem 1.6rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   font-size: 0.88rem;
   text-decoration: none;
   font-weight: 700;
@@ -644,7 +644,7 @@ html {
   padding: 0.85rem;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   color: var(--text-main);
   font-family: inherit;
 }
@@ -710,7 +710,7 @@ html {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   padding: 2.2rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   max-width: 520px;
   width: 90%;
   z-index: 10;
