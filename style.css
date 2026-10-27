@@ -106,7 +106,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-track {
@@ -736,6 +736,7 @@ html {
   max-width: 520px;
   width: 90%;
   z-index: 10;
+  text-align: center;
 }
 .modal-close { 
   position: absolute; 
