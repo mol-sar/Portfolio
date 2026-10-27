@@ -254,6 +254,114 @@ html {
   aspect-ratio: 4 / 5;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
 }
+/* ============================================================
+   CREATIVE EDITOR / CROP BOX HERO EFFECT
+   ============================================================ */
+.crop-editor-container {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+  background: var(--bg-card);
+  margin: 0 auto;
+}
+
+.editor-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+/* Dims the area outside your crop focus */
+.editor-darken-layer {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+/* The Active Crop / Viewfinder Box */
+.crop-focus-frame {
+  position: absolute;
+  top: 10%;
+  left: 28%;
+  width: 44%;
+  height: 80%;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.35); /* Inverted clip cutout effect */
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+/* Corner Crop Handles */
+.corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+
+.corner-tl { top: -2px; left: -2px; border-width: 3px 0 0 3px; }
+.corner-tr { top: -2px; right: -2px; border-width: 3px 3px 0 0; }
+.corner-bl { bottom: -2px; left: -2px; border-width: 0 0 3px 3px; }
+.corner-br { bottom: -2px; right: -2px; border-width: 0 3px 3px 0; }
+
+/* Edge Midpoint Tics */
+.handle {
+  position: absolute;
+  background: #ffffff;
+}
+.handle-t { top: -2px; left: 50%; transform: translateX(-50%); width: 14px; height: 3px; }
+.handle-b { bottom: -2px; left: 50%; transform: translateX(-50%); width: 14px; height: 3px; }
+.handle-l { left: -2px; top: 50%; transform: translateY(-50%); height: 14px; width: 3px; }
+.handle-r { right: -2px; top: 50%; transform: translateY(-50%); height: 14px; width: 3px; }
+
+/* Resolution Badge inside Crop Box */
+.crop-spec-badge {
+  background: rgba(20, 18, 20, 0.75);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.72rem;
+  font-family: monospace;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+/* Subtle 0.0° Bottom Angle Marker */
+.crop-status-bar {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-family: monospace;
+  font-size: 0.7rem;
+  pointer-events: none;
+}
+
+/* On card hover: subtle frame pulse */
+.crop-editor-container:hover .crop-focus-frame {
+  border-color: var(--accent);
+}
+
+.crop-editor-container:hover .corner,
+.crop-editor-container:hover .handle {
+  border-color: var(--accent);
+  background-color: var(--accent);
+}
 
 /* 5. WHA I DO? SECTION */
 .services-grid {
