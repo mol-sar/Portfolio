@@ -745,23 +745,74 @@ html {
 
 /*---------------------------------------------------------------------------------------------------------------------------
 /* 13.  Modal & Scroll to Top */
-.modal { display: none; position: fixed; inset: 0; z-index: 200; justify-content: center; align-items: center; }
-.modal.open { display: flex; }
-.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.65); }
+/* Modal Component */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+
 .modal-content {
   position: relative;
-  background: var(--bg-secondary);
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
   padding: 2.2rem;
-  border-radius: 8px;
-  max-width: 520px;
-  width: 90%;
-  z-index: 10;
+  border-radius: 12px;
+  max-width: 540px;
+  width: 100%;
+  z-index: 1001; /* Must sit above backdrop */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
-.modal-close { position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; font-size: 1.5rem; color: var(--text-muted); cursor: pointer; }
-.modal-category { color: var(--accent); font-size: 0.88rem; font-weight: 600; margin-bottom: 1rem; }
-.modal-links { margin-top: 1.5rem; }
 
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--accent);
+}
+
+.modal-category {
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin: 0.4rem 0 1rem 0;
+  text-transform: uppercase;
+}
+
+.modal-content p {
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.modal-links {
+  margin-top: 1.6rem;
+}
 .scroll-top-btn {
   position: fixed;
   bottom: 2rem;
