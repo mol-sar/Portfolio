@@ -113,6 +113,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterBtns = document.querySelectorAll(".filter-btn");
   const portfolioCards = document.querySelectorAll(".portfolio-card");
 
+  // Calculate and append counts automatically
+  filterBtns.forEach(btn => {
+    const filter = btn.getAttribute("data-filter");
+    let count = 0;
+    if (filter === "all") {
+      count = portfolioCards.length;
+    } else {
+      portfolioCards.forEach(c => {
+        if (c.getAttribute("data-category") === filter) count++;
+      });
+    }
+    btn.innerHTML = `${btn.textContent} <span class="filter-count">${count}</span>`;
+  });
+
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       filterBtns.forEach(b => b.classList.remove("active"));
@@ -129,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
+  
   // 9. Interactive Modal Dialog
   const modal = document.getElementById("project-modal");
   const modalTitle = document.getElementById("modal-title");
@@ -227,7 +241,9 @@ document.addEventListener("DOMContentLoaded", () => {
       feedback.textContent = "Thank you! Your message has been sent successfully.";
       contactForm.reset();
       charCount.textContent = "0";
-    }
+  
+  });
+});
     // 12. Dynamic Typewriter Effect for Hero
   const roles = [
     "Multimedia Computing Student",
