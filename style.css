@@ -274,7 +274,7 @@ html {
   border-radius: inherit;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   padding: 1.8rem;
   text-align: center;
   transition: var(--transition);
@@ -284,21 +284,6 @@ html {
   transform: translateY(-5px);
   border-color: var(--accent);
   box-shadow: 0 10px 24px rgba(0,0,0,0.3);
-}
-
-.service-media {
-  width: 100%;
-  height: 140px;
-  background: var(--bg-placeholder);
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.4rem;
-  color: var(--text-muted);
-  font-weight: 600;
-  font-size: 0.9rem;
-  border: 1px dashed var(--border-color);
 }
 
 .service-card h3 {
@@ -452,7 +437,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: calc(var(--radius-lg) - 8px);
   border-top-left-radius: var(--radius-lg);
   border-top-right-radius: var(--radius-lg);
   border-bottom: 1px solid var(--border-color);
