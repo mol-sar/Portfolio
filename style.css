@@ -67,6 +67,8 @@ html {
   background: linear-gradient(165deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
   background-attachment: fixed;
   min-height: 100vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) var(--bg-primary);
 }
 
 .container {
@@ -104,6 +106,28 @@ html {
   background-color: var(--accent);
   margin: 0.6rem auto 0 auto;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full, 9999px);
+  border: 2px solid var(--bg-primary); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent); 
+}html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) var(--bg-primary);
+}
+
 
 /*  3. NAVIGATION */
 .navbar {
