@@ -70,9 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
   
   //---------------------------------------------------------------------------------------------------------------------------
   // 4. Close Mobile Menu on Nav Click
-  document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
+  document.querySelectorAll(".view-details-btn").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const id = btn.getAttribute("data-id");
+      openModal(id);
     });
   });
   
@@ -238,5 +240,6 @@ const filterBtns = document.querySelectorAll(".filter-btn");
       feedback.textContent = "Thank you! Your message has been sent successfully.";
       contactForm.reset();
       charCount.textContent = "0";
+    }
   });
 });
