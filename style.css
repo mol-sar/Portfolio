@@ -273,7 +273,7 @@ html {
 .service-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: 1.8rem;
   text-align: center;
   transition: var(--transition);
@@ -289,7 +289,7 @@ html {
   width: 100%;
   height: 140px;
   background: var(--bg-placeholder);
-  border-radius: var(--radius-md);
+  border-radius: calc(var(--radius-lg) - 8px);
   display: flex;
   align-items: center;
   justify-content: center;
