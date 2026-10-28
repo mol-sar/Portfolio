@@ -2,7 +2,7 @@
 const projectsData = {
   1: {
     title: "EcoMiner: 2D Mining Simulation Gamee Engine",
-    tech: "C++, OpenGL, GLUT, Object-Oriented Architecture",
+    tech: "C++, OpenGL, FreeGLUT, Object-Oriented Programming",
     desc: "A collaborative group project under computer graphics where we created an interactive 2D mining game engine from the scratch using mainly C++ and OpenGL. I focused on drawing 2D shapes, handling smooth player physics, and detecting collisions when interacting with the game map.",
     repo: "https://github.com/mol-sar/ecominer2d"
   },
@@ -14,19 +14,19 @@ const projectsData = {
   },
   3: {
     title: "ART Mobile Application Prototype",
-    tech: "Figma UI/UX",
+    tech: "Figma, UI/UX and Design",
     desc: "A clickable mobile prototype built in Figma for Sarawak's public transit system. The app designed from Login Page to view map route and lastly payment methods. It also includes accesibility such as color contrast, font size adjustment and usability guidelines",
     repo: "https://www.figma.com/design/LQoZXhRaH7iUulW9eQFGgK/UiUx-project-protoype"
   },
   4: {
     title: "SDG Driver Safety",
-    tech: "Java, Java Swing GUI, Event-Driven Architecture",
+    tech: "Java, Java Swing GUI",
     desc: "Desktop evaluation software created in support of UN Sustainable Development Goal 3 (Good Health and Well-Being) that focused mainly on Driver Safety. This app integrates an interactive Java Swing interface featuring progress tracking, badging mechanics, achievements and quiz for safety evaluation.",
     repo: "https://github.com/mol-sar/thedesktopapplication"
   },
   5: {
     title: "Pet Hotel Hospitality Management System",
-    tech: "C++, Abstract Base Classes, Virtual Functions, Pointers",
+    tech: "C++, Abstract Base Classes",
     desc: "A terminal-based management system written in C++. It manages pet reservations, room check-ins, and staff duties. The program uses object-oriented programming concepts like classes, inheritance, and pointers to keep the system organized and reliable.",
     repo: "https://github.com/mol-sar/Pet-Hotel-System"
   },
