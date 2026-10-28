@@ -8,7 +8,7 @@
   --radius-lg: 26px;
   --radius-full: 9999px;
  
-  /* Slate Dark Canvas */
+  /* Slate Color Pallete */
   --bg-primary: #2d262b;       
   --bg-secondary: #362e33;     
   --bg-card: #3f363c;          
@@ -27,7 +27,7 @@
   --error: #d17570;
   --transition: all 0.25s ease;
 }
-
+  /* Light Mode Color Pallete */
 [data-theme="light"] {
   --bg-primary: #f8f6f5;       
   --bg-secondary: #eee9e5;    
@@ -104,7 +104,7 @@ html {
   background-color: var(--accent);
   margin: 0.6rem auto 0 auto;
 }
-
+  /*Side Scroll wheel*/
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -213,7 +213,7 @@ html {
 
 .tagline {
   color: var(--text-muted);
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
@@ -241,7 +241,7 @@ html {
 
 .hero-desc {
   color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   max-width: 540px;
   margin-bottom: 2rem;
@@ -316,7 +316,7 @@ html {
 
 .service-card p {
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 1.0rem;
   line-height: 1.6;
 }
 
@@ -361,7 +361,7 @@ html {
 }
 
 .about-lead {
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   color: var(--text-main);
   line-height: 1.6;
   margin-bottom: 1rem;
@@ -386,7 +386,7 @@ html {
   align-items: flex-start;
   gap: 0.8rem;
   color: var(--text-main);
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .check-icon {
@@ -479,7 +479,7 @@ html {
 
 .thumb-placeholder {
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
@@ -511,7 +511,7 @@ html {
 
 .card-body p {
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 1.2rem;
   line-height: 1.55;
   margin-bottom: 1.4rem;
   flex-grow: 1;
@@ -576,7 +576,7 @@ html {
 
 .skill-tile p {
   color: var(--text-muted);
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   line-height: 1.5;
 }
 
