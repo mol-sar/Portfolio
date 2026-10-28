@@ -846,17 +846,20 @@ html {
     text-align: center;
   }
 
-  .hero-badge {
-    display: table !important;
+    .hero-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0.6rem auto 1.2rem auto !important;
+    width: fit-content !important;
+  }
+ 
+ .hero-desc {
+    text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    align-self: center !important;
   }
-
-  .hero-desc {
-    margin-left: auto;
-    margin-right: auto;
-   }
  }
 
 /*Buttons stack on mobile*/
