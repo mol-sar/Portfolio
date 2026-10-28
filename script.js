@@ -15,7 +15,7 @@ const projectsData = {
   3: {
     title: "ART Mobile Application Prototype",
     tech: "Figma UI/UX",
-    desc: "A clickable mobile prototype built in Figma for Sarawak's public transit system. The app designed from Login Page to view map route and lastly payment methods. It also includes accesibility such as color contrast, font size adjustment and usability guidelines"
+    desc: "A clickable mobile prototype built in Figma for Sarawak's public transit system. The app designed from Login Page to view map route and lastly payment methods. It also includes accesibility such as color contrast, font size adjustment and usability guidelines",
     repo: "https://www.figma.com/design/LQoZXhRaH7iUulW9eQFGgK/UiUx-project-protoype"
   },
   4: {
