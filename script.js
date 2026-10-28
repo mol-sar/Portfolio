@@ -1,27 +1,27 @@
 // Detailed Project Modal Data
 const projectsData = {
   1: {
-    title: "EcoMiner: 2D Mining Simulation Engine",
+    title: "EcoMiner: 2D Mining Simulation Gamee Engine",
     tech: "C++, OpenGL, GLUT, Object-Oriented Architecture",
-    desc: "A collaborative university project where we created an interactive 2D mining game engine from the ground up using C++ and OpenGL. I focused on drawing 2D shapes, handling smooth player physics, and detecting collisions when interacting with the game map.",
+    desc: "A collaborative group project under computer graphics where we created an interactive 2D mining game engine from the scratch using mainly C++ and OpenGL. I focused on drawing 2D shapes, handling smooth player physics, and detecting collisions when interacting with the game map.",
     repo: "https://github.com/mol-sar/ecominer2d"
   },
   2: {
     title: "Sarawak Heritage Online Auction (SHAA)",
     tech: "PHP, MariaDB / MySQL, Schema Normalization (1NF–3NF)",
-    desc: "A dynamic auction website for cultural items developed with PHP and MariaDB/MySQL. I structured the database using 3NF normalization rules to prevent duplicate data, keep transactions secure, and support multiple users bidding at the same time.",
+    desc: "An auction website for cultural items developed with PHP and MariaDB/MySQL. I structured the database using 3NF normalization rules to prevent duplicate data, keep transactions secure, and support multiple users bidding at the same time.",
     repo: "https://github.com/mol-sar/SHA"
   },
   3: {
     title: "ART Mobile Application Prototype",
-    tech: "Figma UI/UX, Design Systems, Mobile Interaction Design",
-    desc: "A clickable mobile prototype built in Figma for Sarawak's public transit system. The app lets passengers look up train schedules, view route maps, and purchase digital tickets. Designed following mobile usability guidelines and accessible color contrast.",
+    tech: "Figma UI/UX",
+    desc: "A clickable mobile prototype built in Figma for Sarawak's public transit system. The app designed from Login Page to view map route and lastly payment methods. It also includes accesibility such as color contrast, font size adjustment and usability guidelines"
     repo: "https://www.figma.com/design/LQoZXhRaH7iUulW9eQFGgK/UiUx-project-protoype"
   },
   4: {
     title: "SDG Driver Safety",
     tech: "Java, Java Swing GUI, Event-Driven Architecture",
-    desc: "Desktop evaluation software created in support of UN Sustainable Development Goal 11 (Sustainable Cities and Communities). Integrates an interactive Java Swing interface featuring custom progress tracking, badging mechanics, and safety metric evaluation logic.",
+    desc: "Desktop evaluation software created in support of UN Sustainable Development Goal 3 (Good Health and Well-Being) that focused mainly on Driver Safety. This app integrates an interactive Java Swing interface featuring progress tracking, badging mechanics, achievements and quiz for safety evaluation.",
     repo: "https://github.com/mol-sar/thedesktopapplication"
   },
   5: {
@@ -33,7 +33,7 @@ const projectsData = {
   6: {
     title: "Java String Cipher & Encoder",
     tech: "Java, Java Swing GUI, String Manipulation, Cipher Logic",
-    desc: "A collaborative Java desktop tool developed for an assignment. It validates user text and applies a custom shift cipher across lowercase letters and numbers while preserving spaces. I implemented the core validation and encoding logic in Encoded.java, handling character parsing and dynamic key generation.",
+    desc: "A collaborative Java desktop tool developed for an assignment. It validates user text and applies a custom shift cipher across lowercase letters and numbers while preserving spaces. I contributed in making the cipher logic calculation.",
     repo: "https://github.com/mol-sar/Encoded"
   }
 };
