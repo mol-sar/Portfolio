@@ -242,7 +242,7 @@ html {
 
 .hero-desc {
   color: var(--text-muted);
-  font-size: 1.05rem;
+  font-size: 1.07rem;
   line-height: 1.6;
   max-width: 540px;
   margin-bottom: 2rem;
@@ -354,7 +354,6 @@ html {
 
 .about-content .section-title {
   text-align: justify;
-  
 }
 
 .about-content .title-underline {
@@ -369,7 +368,7 @@ html {
 }
 
 .about-text {
-  font-size: 0.97rem;
+  font-size: 0.2rem;
   color: var(--text-muted);
   line-height: 1.65;
   margin-bottom: 1.5rem;
@@ -484,6 +483,8 @@ html {
 }
 
 .card-body {
+  align-items: center;    
+  text-align: center;
   padding: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -491,7 +492,7 @@ html {
 }
 
 .badge {
-  align-self: flex-start;
+  align-self: center;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -518,7 +519,7 @@ html {
 }
 
 .btn-card {
-  align-self: flex-start;
+  align-self: center;
   padding: 0.55rem 1.2rem;
   font-size: 1.00rem;
   font-weight: 600;
