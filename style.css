@@ -492,7 +492,7 @@ html {
 }
 
 .badge {
-  align-self: flex-start;
+  align-self: center;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -512,13 +512,14 @@ html {
 
 .card-body p {
   color: var(--text-muted);
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   line-height: 1.55;
   margin-bottom: 1.4rem;
   flex-grow: 1;
 }
 
 .btn-card {
+  margin-top: auto;
   align-self: center;
   padding: 0.55rem 1.2rem;
   font-size: 1.00rem;
