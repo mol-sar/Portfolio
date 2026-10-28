@@ -492,7 +492,7 @@ html {
 }
 
 .badge {
-  align-self: center;
+  align-items: left;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
