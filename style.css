@@ -847,9 +847,10 @@ html {
   }
 
   .hero-badge {
-    display: inline-block;
-    margin: 0.6rem auto 1.2rem auto;
-    width: fit-content;
+    display: table !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
   }
 
   .hero-desc {
