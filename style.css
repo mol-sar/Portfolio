@@ -764,7 +764,7 @@ html {
   color: var(--text-main);
   line-height: 1.35;
   margin-bottom: 0.4rem;
-  padding-right: 2.5rem;
+  padding: 0rem;
   text-wrap: balance;
   text-align: center;
 }
