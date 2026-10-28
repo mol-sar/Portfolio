@@ -492,7 +492,8 @@ html {
 }
 
 .badge {
-  align-self: center;
+  align-self: flex-start;
+  width: fit-content;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -740,7 +741,7 @@ html {
   max-width: 520px;
   width: 90%;
   z-index: 10;
-  text-align: center;
+  text-align: justify;
 }
 .modal-close { 
   position: absolute; 
@@ -787,7 +788,14 @@ html {
   overflow-wrap: break-word;
 }
 
-.modal-links { margin-top: 1.5rem; }
+.modal-links, 
+#modal-links {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .scroll-top-btn {
   position: fixed;
