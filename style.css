@@ -353,6 +353,7 @@ html {
 
 .about-content .section-title {
   text-align: left;
+  text-wrap: balance;
 }
 
 .about-content .title-underline {
