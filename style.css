@@ -483,8 +483,8 @@ html {
 }
 
 .card-body {
-  align-items: justify;    
-  text-align: justify;
+  align-items: center;    
+  text-align: center;
   padding: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -492,7 +492,7 @@ html {
 }
 
 .badge {
-  align-self: justify;
+  align-self: flex-start;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
