@@ -368,7 +368,7 @@ html {
 }
 
 .about-text {
-  font-size: 0.2rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
   line-height: 1.65;
   margin-bottom: 1.5rem;
@@ -483,7 +483,7 @@ html {
 }
 
 .card-body {
-  align-items: center;    
+  align-items: justify;    
   text-align: justify;
   padding: 1.6rem;
   display: flex;
@@ -492,7 +492,7 @@ html {
 }
 
 .badge {
-  align-self: flex;
+  align-self: justify;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
