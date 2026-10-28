@@ -814,7 +814,7 @@ html {
 }
 .scroll-top-btn.visible { display: flex; }
 
-/* 14.RESPONSIVE MEDIA QUERIES */
+/* 14. MOBILE PHONE QUERIES */
 @media (max-width: 850px) {
   .hero-grid, .about-grid, .footer-grid {
     grid-template-columns: 1fr;
@@ -847,8 +847,9 @@ html {
   }
 
   .hero-badge {
-    align-self: center;
-    margin: 0.5rem auto 1rem;
+    display: inline-block;
+    margin: 0.6rem auto 1.2rem auto;
+    width: fit-content;
   }
 
   .hero-desc {
