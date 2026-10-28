@@ -767,6 +767,7 @@ html {
   padding: 0rem;
   text-wrap: balance;
   text-align: center;
+  width: 100%;
 }
 
 .modal-category,
@@ -778,6 +779,7 @@ html {
   margin-bottom: 1.2rem; 
   text-wrap: pretty;
   text-align: center;
+  width: 100%
 }
 
 #modal-desc,
